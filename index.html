@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Justdial - Local Search, Social, News, Videos, Shopping</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="icon" href="./fevicon.jpg">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <link rel="icon" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+    <body>
+        <!-- Modal start-->
+        <div class="modal hide" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">                    
+                        <div class="modal-body p-0">
+                            <!--Login page Modal start-->
+                            <div class="d-block">
+                                <button class="btn end-0 top-0 bg-secondary bg-opacity-50 rounded-pill mt-3 me-3 text position-absolute py-1" data-bs-dismiss="modal" style="color:#ffff;font-size:15px;padding:5px 12px;font-family:'Calibri';" >Skip</button>                            
+                                <img class="img-fluid" src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/login_banner_28mar.png"/>
+                                
+                                <form class="bg-white p-4 text-center rounded-top-5 position-relative" style="margin-top:-8%;">
+                                    <h5>India's # 1 Local Search Engine</h5>                                
+                                    <div class="my-4">                                  
+                                    <div class="input-group">
+                                    <div class="input-group-text fw-bold">+91</div>
+                                    <input type="text" class="form-control form-control-lg s_input fw-semibold" id="autoSizingInputGroup" placeholder="Mobile Number">
+                                    </div>
+                                    </div>                               
+                                    <button type="submit" class="btn btn-lg w-100 btn-primary s_input fw-semibold" disabled>Login with OTP</button>
+                                    <p class="my-3 fw-semibold text-secondary-emphasis" style="font-size:14px;">------------ or continue with ------------</p>
+                                    <button type="submit" class="btn text-dark w-100 border border-1 s_input fw-semibold">
+                                        <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/truecaller-svg.svg"/>
+                                        TrueCaller</button>
+                                </form>
+                            </div>
+                            <!--Login page Modal End-->
+
+                            <!--Admin page Modal start-->
+                            <div class="d-none">
+                                <div class="modal-header border-bottom-0 pb-0">                        
+                                    <div calss="float-start">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                </div>
+                                <!-- admin pic -->
+                                <div class="row my-2 mx-0">
+                                    <div class="col-6 my-auto px-3">
+                                        <a href="#" class="btn fw-semibold fs-5">Sign in</a>
+                                    </div>
+                                    <div class="col-6 pe-5 d-flex flex-row-reverse">
+                                        <a href="#"><img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/prot/profiledefault.png" class="img-fluid" width="50px"/></a>
+                                    </div>
+                                </div>
+                                <!-- three options button -->
+                                <div class="my-3 px-3">
+                                    <a href="#" class="btn btn-sm btn-outline-secondary btn-opacity-25 rounded-pill text-dark-subtle"> Saved</a>                           
+                                    <a href="#" class="btn btn-sm btn-outline-secondary rounded-pill mx-2 text-dark-subtle">Favorites</a>
+                                    <a href="#" class="btn btn-sm btn-outline-secondary rounded-pill text-dark-subtle">Interests</a>
+                                </div>
+                                <!-- list options -->
+                                <ul class="nav flex-column s_modal_list">
+                                    <li class="nav-item mb-1">
+                                    <a class="nav-link active px-0 px-3" aria-current="page" href="#">
+                                        <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/Languageicn.svg" class="img-fluid"/> &nbsp;English
+                                        <span class="float-end mt-2 pe-3" style="font-size:12px;">Change Language</span>
+                                    </a>
+                                    </li>
+                                    <li class="nav-item my-2">
+                                    <a class="nav-link px-0 px-3" href="#">
+                                        <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/helpicn.svg" class="img-fluid"/> &nbsp;Customer Service</a>
+                                    </li>
+                                    <li class="nav-item my-2">
+                                    <a class="nav-link px-0 px-3" href="#">
+                                        <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/listbusinessicn.svg" class="img-fluid"/> &nbsp;List your Business
+                                        <img class="ms-2" src="https://akam.cdn.jdmagicbox.com/images/icons/gif/freeanimation2x" width="50px"/>
+                                    </a>
+                                    </li>
+                                    <li class="nav-item my-2">
+                                    <a class="nav-link px-0 px-3">
+                                        <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/advertiseicn.svg" class="img-fluid"/> &nbsp;Advertise</a>
+                                    </li>
+                                    <li class="nav-item my-2">
+                                    <a class="nav-link px-0 px-3">
+                                        <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/mytransactions-icn.svg" class="img-fluid"/> &nbsp;My Transactions</a>
+                                    </li>
+                                    <li class="nav-item my-2">
+                                    <a class="nav-link px-0 px-3">
+                                        <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/mytransactions-icn.svg" class="img-fluid"/> &nbsp;Wishlist</a>
+                                    </li>
+                                    <li class="nav-item my-2">
+                                    <a class="nav-link px-0 px-3">
+                                        <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/managequotesicn.svg" class="img-fluid"/> &nbsp;Manage Quotes</a>
+                                    </li>
+                                    <li class="nav-item my-2">
+                                    <a class="nav-link px-0 px-3">
+                                        <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/we-are-hiring.svg" class="img-fluid"/> &nbsp;We are hiring</a>
+                                    </li>
+                                    <li class="nav-item my-2">
+                                    <a class="nav-link px-0 px-3">
+                                        <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/settings.svg" class="img-fluid"/> &nbsp;Settings</a>
+                                    </li>
+                                    <li class="nav-item my-2">
+                                    <a class="nav-link px-0 px-3">
+                                        <img src="	https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/privacyicn.svg" class="img-fluid"/> &nbsp;Privacy Policy</a>
+                                    </li>
+                                    <li class="nav-item my-2">
+                                    <a class="nav-link px-0 px-3">
+                                        <img src="	https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/investors_relation.svg" class="img-fluid"/> &nbsp;Investor Relations</a>
+                                    </li>
+                                    <li class="nav-item my-2">
+                                    <a class="nav-link px-0 px-3">
+                                        <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/newproductsicn.svg" class="img-fluid"/> &nbsp;What's New</a>
+                                    </li>
+                                    <li class="nav-item my-2">
+                                    <a class="nav-link px-0 px-3">
+                                        <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/othersicn.svg" class="img-fluid"/> &nbsp;Other</a>
+                                    </li>
+                                    <li class="nav-item mt-1">
+                                    <a class="nav-link px-0 px-3">
+                                        <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/logouticn1.svg" class="img-fluid"/> &nbsp;Login</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--Admin page Modal End-->
+                        </div>                    
+                    </div>
+                </div>
+        </div>
+        <!-- Modal End-->
+        <div class="container-fluid bgcolor px-0">  <!--s_tbdr-->
+                <!-- header start -->
+                <header class="sticky-top bg-white border-bottom">  <!---->
+                    <div class="row h-100 py-3 mx-0">
+                        <div class="col-sm-2 col-4 my-auto"> <!---->
+                            <a href="#"><img src="./img/jdlogosvg.svg" class="img-fluid" width="90px"/></a>
+                        </div>
+                        <!-- small screen Notification section start -->
+                        <div class="col-sm-3 col-8">  <!---->
+                            <div class="float-end d-block d-sm-none">
+                                <a href="#" class="btn btn-sm bg-primary rounded-pill fw-semibold" style="color:#ffff;font-size:11px;padding:5.5px 13px;font-family:'sans-serif';" >OPEN APP</a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="./img/notify_icon.svg" class="mx-2" width="23px"/></a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="./img/bar.svg"/></a>
+                            </div>                        
+                        </div>
+                        <!-- small screen Notification section end -->
+                        <div class="col-sm-7 col-12 s_menu my-auto bg-white">
+                            <!-- Small screen searchbar start -->
+                            <form class="d-sm-none d-md-none mx-1 pt-2">                            
+                                <div class="my-2 d-flex border border-dark border-1 rounded-3">                              
+                                    <button type="button" class="btn pe-2 bg-white border-0 rounded-circle">
+                                        <img src="./img/srch.svg"/>
+                                    </button>
+                                    <input type="search" placeholder="Spas & Salons" class="fw-semibold opacity-75 form-control border border-0 shadow-none px-0">
+                                    <button type="button" class="btn px-2 bg-white border-0 rounded-circle">
+                                        <img src="./img/mic.svg" width="21px"/>
+                                    </button>
+                                </div>                            
+                            </form>
+                            <!-- Small screen searchbar End -->
+                            <!--Large screen nav section start -->
+                            <nav class="d-none d-sm-block">
+                                <ul class="nav ms-4 s_menu">
+                                    <li class="nav-item">
+                                    <a class="nav-link active px-1 py-0" aria-current="page" href="#">
+                                        <img src="./img/nav_language_icon.svg" width="17px"/> English
+                                        <img src="./img/down_arrow5.svg"/>                                
+                                    </a>                                
+                                        <ul class="s_submenu position-absolute list-unstyled border border rounded-1">
+                                            <li><a href="#" class="text-decoration-none">&nbsp;&nbsp;&nbsp; Hindi</a></li>
+                                            <li><a href="#" class="text-decoration-none">&nbsp;&nbsp;&nbsp; Marathi</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link px-2 py-0 text-secondary-emphasis" href="#">We are Hiring</a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link px-2 py-0 text-secondary-emphasis" href="#">Investor Relations</a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link px-1 py-0 text-secondary-emphasis" href="#"><img src="./img/nav_advertise_icon.svg" width="17px"/> Advertise</a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link px-2 py-0 text-secondary-emphasis" href="#"><img src="./img/nav_listing_icon.svg" width="17px"/> Free Listing</a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link px-2 py-0 text-secondary-emphasis" href="#"><img src="./img/notify_icon.svg" width="23px"/></a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link px-0 py-0 text-secondary-emphasis" href="#"><img src="./img/jd_login_icon.svg" width="27px"/>Login / Sign Up</a>
+                                    </li>
+                                </ul>
+                            </nav> 
+                            <!--Large screen nav section end -->
+                        </div>
+                    </div>            
+                </header>                
+                <!-- header end -->
+
+                <!--Large screen main section start-->                
+                <main class="s_LS_main d-none d-lg-block mt-3 px-4">
+                    <!--s_LS_main1 section start-->
+                    <div class="row m-0 s_LS_main1" style="height:115px;">
+                        <div class="col-8 bg-white">
+                            <h3 class="fw-bold" style="font-family: Arial, Helvetica, sans-serif;">Search across ......</h3>
+                            <div class="row">
+                                <div class="col-3 px-0 mx-3 d-flex border border-2 border-secondary rounded-1 shadow-sm bg-secondary-subtle">
+                                    <button type="button" class="btn border-0 rounded-1 px-2">
+                                        <i class="fa-solid fa-location-dot" style="color: #898a8c;"></i>
+                                    </button>
+                                    <input type="search" class="form-control py-2 rounded-0 px-0 bg-secondary-subtle shadow-none border-0" placeholder="Mumbai" id="exampleInput">  
+                                </div>
+                                <div class="col-7 p-0">
+                                    <form>                            
+                                        <div class="d-flex border border-2 border-secondary rounded-1 shadow-sm">                              
+                                            <input type="search" placeholder="Search for Spas & Salons" class="fw-semibold py-2 form-control border border-0 shadow-none px-2 rounded-0">
+                                            <button type="button" class="btn bg-white border-0 rounded-0 px-0">
+                                                <img src="./img/mic.svg"/>
+                                            </button>
+                                            <button type="button" class="btn border-0 rounded-1 s_LS_Ficon">
+                                                <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                                            </button>                                          
+                                        </div>                                                                    
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <button class="btn btn-sm btn-outline-dark position-relative float-end me-3 mt-4 fw-semibold bg-white text-dark"> Download App
+                                <img class="img-fluid position-absolute btn btn-sm btn-outline-dark px-0 bg-white" style="height:52px; width:25px; top:-12px;" src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/getapp_jd.gif"/>
+                            </button>
+                        </div>
+                    </div>
+                    <!--s_LS_main1 section end-->
+                    <!--s_LS_main2 section start-->
+                    <div class="row h-100 mx-0">
+                        <!-- banner section start -->
+                        <div class="col-6 s_LS_main2 pe-2 rounded-3"><!---->
+                            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active rounded-circle" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" class="rounded-circle" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" class="rounded-circle" aria-label="Slide 3"></button>
+                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" class="rounded-circle" aria-label="Slide 4"></button>
+                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" class="rounded-circle" aria-label="Slide 5"></button>
+                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" class="rounded-circle" aria-label="Slide 6"></button>
+                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" class="rounded-circle" aria-label="Slide 7"></button>
+                                </div>
+                                <div class="carousel-inner rounded-4">
+                                <div class="carousel-item active" data-bs-interval="10000">
+                                    <img class="img-fluid" src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/banner_hotels.png?v=1.0" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item" data-bs-interval="2000">
+                                    <img class="img-fluid" src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/banner_packersmovers.png?v=1.1" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="img-fluid" src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/banner_interiordesigners.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="img-fluid" src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/banner_CCTV.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="img-fluid" src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/banner_free_listing.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="img-fluid" src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/banner_bills.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="img-fluid" src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/banner_webflight_23feb.png" class="d-block w-100" alt="...">
+                                </div>
+                                </div>
+                                <button class="carousel-control-prev s_pn ms-2" style="top:47%;" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next s_pn me-2" style="top:47%;" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                <span class="carousel-control-next-icon fw-semibold" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                                </button>
+                            </div> 
+                        </div>
+                        <!-- banner section end -->
+                        <div class="col-6">
+                            <div class="row h-100 text-center">
+                                <div class="col-3 px-2"><!---->
+                                    <img class="img-fluid h-100 rounded-4" src="./img/B2B_Bn.png"/>
+                                </div>
+                                <div class="col-3 px-2 p-0"><!---->
+                                    <img class="img-fluid h-100 rounded-4" src="./img/Xxperts_Bn.png"/>
+                                </div>
+                                <div class="col-3 px-2 p-0"><!---->
+                                    <img class="img-fluid h-100 rounded-4" src="./img/RealEstate.png"/>
+                                </div>
+                                <div class="col-3 px-2 p-0"><!---->
+                                    <img class="img-fluid h-100 rounded-4" src="./img/Doctors_bn.png"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--s_LS_main2 section end-->
+
+                    <!--s_LS_main3 section start-->                
+                    <div class="row text-center s_LS_main3 my-5">
+                        <div class="col">
+                            <a href="#"><img class="img-fluid" src="./img/icons/restaurant-2022.svg"/>
+                            Restaurants</a>
+                        </div>
+                        <div class="col">
+                            <a href="#"><img class="img-fluid" src="./img/icons/hotel-2022.svg"/>
+                            Hotels</a>
+                        </div>
+                        <div class="col">
+                            <a href="#"><img class="img-fluid" src="./img/icons/realestate.svg"/>
+                            <br>Real Estate</a>
+                        </div>
+                        <div class="col">
+                            <a href="#"><img class="img-fluid" src="./img/icons/homedecor.svg"/>
+                            Home Decor</a>
+                        </div>
+                        <div class="col">
+                            <a href="#"><img class="img-fluid" src="./img/icons/education.svg"/>
+                            Education</a>
+                        </div>
+                        <div class="col">
+                            <a href="#"><img class="img-fluid" src="./img/icons/renthire.svg"/>
+                            <br>Rent & Hire</a>
+                        </div>
+                        <div class="col">
+                            <a href="#"><img class="img-fluid" src="./img/icons/hospital_2023.svg"/>
+                            Hospitals</a>
+                        </div>
+                        <div class="col">
+                            <a href="#"><img class="img-fluid" src="./img/icons/contractor-2022.svg"/>
+                            Contractors</a>
+                        </div>
+                        <div class="col">
+                            <a href="#"><img class="img-fluid" src="./img/icons/pet_shops_2023.svg"/>
+                            <br>Pet Shops</a>
+                        </div>
+                        <div class="col">
+                            <a href="#"><img class="img-fluid" src="./img/icons/pg-hostels-rooms.svg"/>
+                            PG/Hostels</a>
+                        </div>
+                    </div>
+                    <div class="row text-center s_LS_main3 my-5"> 
+                        <div class="col">
+                            <a href="#"><img class="img-fluid" src="./img/icons/estate-agent.svg"/>
+                            Estate</a>
+                        </div>
+                        <div class="col">
+                            <a href="#"><img class="img-fluid" src="./img/icons/dentist_2023.svg"/>
+                            Dentists</a>
+                        </div>
+                        <div class="col">
+                            <a href="#"><img class="img-fluid" src="./img/icons/gym_2023.svg"/>
+                            <br>GYM</a>
+                        </div>
+                        <div class="col">
+                            <a href="#"><img class="img-fluid" src="./img/icons/consultants_2023.svg"/>
+                            Consultants</a>
+                        </div>
+                        <div class="col">
+                            <a href="#"><img class="img-fluid" src="./img/icons/eventorganizers.svg"/>
+                            <br>Event Organisers</a>
+                        </div>
+                        <div class="col">
+                            <a href="#"><img class="img-fluid" src="./img/icons/driving_school_2023.svg"/>
+                            Driving Schools</a>
+                        </div>
+                        <div class="col">
+                            <a href="#"><img class="img-fluid" src="./img/icons/packers_movers_2023.svg"/>
+                            Packers & Movers</a>
+                        </div>
+                        <div class="col">
+                            <a href="#"><img class="img-fluid" src="./img/icons/courier_2023.svg"/>
+                            Courier Service</a>
+                        </div>
+                        <div class="col">
+                            <a href="#"><img class="img-fluid" src="./img/icons/travel_2023.svg"/>
+                            <br>Travel</a>
+                        </div>
+                        <div class="col">
+                            <a href="#"><img class="img-fluid border border-dark" src="./img/icons/hk_showmore.svg"/>
+                            Popular Categories</a>
+                        </div>
+                    </div>
+                    <!--s_LS_main3 section end-->
+
+                </main>
+                <!--Large screen main section end-->
+
+                <!--moblie screen main section start -->
+                <main class="s_main d-xl-none d-lg-none">
+                    <!-- main section start -->
+                    <div class="row m-0 text-center s_main1">                    
+                        <div class="col-3 my-auto">
+                            <a href="#">
+                                <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newhotkey/b2b_2x_wog-15dec.gif" class="img-fluid" width="50px"/>
+                                <p class="fw-semibold opacity-75">B2B</p>
+                            </a>
+                        </div>
+                        <div class="col-3  my-auto">
+                            <a href="#">
+                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/finddoctors.svg"/>
+                                <p class="fw-semibold opacity-75">Doctors</p>
+                            </a>
+                        </div>
+                        <div class="col-3  my-auto">
+                            <a href="#">
+                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/travelbookings.svg"/>
+                                <p class="fw-semibold opacity-75">Travel</p>
+                            </a>
+                        </div>                    
+                        <div class="col-3  my-auto">
+                            <a href="#">
+                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/beauty.svg"/>
+                                <p class="fw-semibold opacity-75">Beauty</p>
+                            </a>
+                        </div>
+
+                        <div class="col-3  my-auto">
+                            <a href="#">
+                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/android/new/shop_online.svg"/>
+                                <p class="fw-semibold opacity-75">Shop Online</p>
+                            </a>
+                        </div>
+                        <div class="col-3  my-auto">
+                            <a href="#">
+                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/consultants.svg"/>
+                                <p class="fw-semibold opacity-75">Consultants</p>
+                            </a>
+                        </div>
+                        <div class="col-3  my-auto">
+                            <a href="#">
+                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/renthire.svg"/>
+                                <p class="fw-semibold opacity-75">Rent & Hire</p>
+                            </a>
+                        </div>
+                        <div class="col-3  my-auto">
+                            <a href="#">
+                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/weddingrequisites.svg"/>
+                                <p class="fw-semibold opacity-75">Wedding Requisites</p>
+                            </a>
+                        </div>
+                        
+                        <div class="col-3  my-auto">
+                            <a href="#">
+                                <img src="	https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/homeservices.svg"/>
+                                <p class="fw-semibold opacity-75">Home Services</p>
+                            </a>
+                        </div>
+                        <div class="col-3  my-auto">
+                            <a href="#">
+                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/jobconsultants.svg"/>
+                                <p class="fw-semibold opacity-75">Jobs</p>
+                            </a>
+                        </div>
+                        <div class="col-3  my-auto">
+                            <a href="#">
+                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/repairsservices.svg"/>
+                                <p class="fw-semibold opacity-75">Repairs & Services</p>
+                            </a>
+                        </div>
+                        <div class="col-3  my-auto">
+                            <a href="#">
+                                <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/realestate/pghostelhotkey2xnew.gif" class="img-fluid" width="50px"/>
+                                <p class="fw-semibold opacity-75">PG/Hostel</p>
+                            </a>
+                        </div>
+                                            
+                        <div class="col-3  my-auto">
+                            <a href="#">
+                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/loans.svg"/>
+                                <p class="fw-semibold opacity-75">Loans<br>
+                                <a href="#" class="btn btn-sm btn-outline-danger py-0 fw-bold" style="font-size:10px;color:#e60000;">Instant</a></p>
+                            </a>
+                        </div>
+                        <div class="col-3  my-auto">
+                            <a href="#">
+                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/realestate.svg"/>
+                                <p class="fw-semibold opacity-75">Real Estate<br>
+                                <a href="#" class="btn btn-sm btn-outline-danger py-0 fw-bold" style="font-size:10px;color:#e60000;">Explore</a></p>
+                            </a>
+                        </div>
+                        <div class="col-3  my-auto">
+                            <a href="#">
+                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/education.svg"/>
+                                <p class="fw-semibold opacity-75">Education</p>
+                            </a>
+                        </div>
+                        <div class="col-3  my-auto">
+                            <a href="#">
+                                <img src="	https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/showmore.svg"/>
+                                <p class="fw-semibold opacity-75">Show More</p>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- main1 section end -->
+
+
+                    <!-- 2nd main section start -->
+                    <div class="d_m3 row m-0 mt-2">
+                        <div class="col-3 px-1 position-relative">
+                            <a href="#" class="">
+                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/android/newhome/1/food.jpg?v=1" class="img-fluid " alt="" />
+                                <span class="position-absolute bottom-0 start-0 ps-2 pb-2 text-white span_text">ORDER FOOD</span>
+                            </a>
+                        </div>
+                        <div class="col-3 px-1 position-relative">
+                            <a href="#">
+                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/iphone/new/JioSim.jpg" class="img-fluid" alt="" />
+                                <span class="position-absolute bottom-0 start-0 ps-2 pb-2 text-white span_text">JIO SIM</span>
+                            </a>
+                        </div>
+                        <div class="col-3 px-1 position-relative">
+                            <a href="#">
+                                <img src="https://akam.cdn.jdmagicbox.com/images/icontent/flight/flight_hmpg_banner_27feb.png" class="img-fluid" alt="" />
+                                <span class="position-absolute bottom-0 start-0 ps-2 pb-2 text-white span_text">BOOK FLIGHT</span>
+                            </a>
+                        </div>
+                        <div class="col-3 px-1 position-relative">
+                            <a href="#">
+                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/android/newhome/1/paybills.jpg?v=1" class="img-fluid" alt="" />
+                                <span class="position-absolute bottom-0 start-0 ps-2 pb-2 text-white span_text">PAY BILLS</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 2nd main section end -->
+                    <!-- 3rd main section start -->
+                    <div class="d_m4 row m-0 mt-2">
+                        <div class="col-6 px-1">
+                            <a href="#">
+                                <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/realestate/explore2x.gif" class="img-fluid" alt="" />
+                            </a>
+                        </div>
+                        <div class="col-6 px-1">
+                            <a href="#">
+                                <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/realestate/postright2xnew.gif" class="img-fluid" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 3rd main section end -->
+                    <!-- 4th main section start -->
+                    <div class="d_m5 row m-0 mt-2">
+                        <div>
+                            <a href="#" class="text-secondary-emphasis text-decoration-none fw-bold">Home Services <i class="fa-solid fa-chevron-right float-end"></i></a>
+                        </div>
+                        <div class="col-3 p-0 px-1 mt-1 position-relative">
+                            <a href="#">
+                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/iphone/newhome/2/acrepairservice.png?v=1" class="img-fluid" alt="">
+                                <span class="position-absolute bottom-0 start-0 ps-2 pb-2 text-white span_text">AC REPAIR & SERVICE</span>
+                            </a>
+                        </div>
+                        <div class="col-3 p-0 px-1 mt-1 position-relative">
+                            <a href="#">
+                                <img src="https://akam.cdn.jdmagicbox.com/images/myjd/img-cat-tvrepair_3x.png" class="img-fluid" alt="">
+                                <span class="position-absolute bottom-0 start-0 ps-2 pb-2 text-white span_text">TV REPAIR</span>
+                            </a>
+                        </div>
+                        <div class="col-3 p-0 px-1 mt-1 position-relative">
+                            <a href="#">
+                                <img src="https://akam.cdn.jdmagicbox.com/images/myjd/img-cat-washingmachine_3x.png" class="img-fluid" alt="">
+                                <span class="position-absolute bottom-0 start-0 ps-2 pb-2 text-white span_text">Washing Machine</span>
+                            </a>
+                        </div>
+                        <div class="col-3 p-0 px-1 mt-1 position-relative">
+                            <a href="#">
+                                <img src="https://akam.cdn.jdmagicbox.com/images/myjd/img-cat-pestcontrol_3x.png" class="img-fluid" alt="">
+                                <span class="position-absolute bottom-0 start-0 ps-2 pb-2 text-white span_text">PEST &nbsp; CONTROL</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 4th main section end -->
+                    <!-- 5th main section start -->
+                    <div class="d_m6 row m-0 mt-2">
+                        <div class="col p-0">
+                            <a href="#">
+                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/android/new/Online_consultation_hm.gif" class="img-fluid" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 5th main section end -->
+                    <!-- 6th main section start -->
+                    <div class="d_m7 row m-0 mt-2">
+                        <div>
+                            <a href="#" class="text-secondary-emphasis text-decoration-none fw-bold">Rent & Hire <i class="fa-solid fa-chevron-right float-end"></i></a>
+                        </div>
+                        <div class="col-3 p-0 px-1 position-relative">
+                            <a href="#">
+                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/android/newhome/2/hirevehicles.jpg?v=1" class="img-fluid" alt="" />
+                                <span class="position-absolute bottom-0 start-0 ps-2 pb-2 text-white span_text">HIRE &nbsp; VEHICLES</span>
+                            </a>
+                        </div>
+                        <div class="col-3 p-0 px-1 position-relative">
+                            <a href="#">
+                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/android/newhome/2/rentclothes.jpg?v=1" class="img-fluid" alt="" />
+                                <span class="position-absolute bottom-0 start-0 ps-2 pb-2 text-white span_text">RENT &nbsp; CLOTHES</span>
+                            </a>
+                        </div>
+                        <div class="col-3 p-0 px-1 position-relative">
+                            <a href="#">
+                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/android/newhome/2/rentfurniture.jpg?v=1" class="img-fluid" alt="" />
+                                <span class="position-absolute bottom-0 start-0 ps-2 pb-2 text-white span_text">RENT FURNITURE</span>
+                            </a>
+                        </div>
+                        <div class="col-3 p-0 px-1 position-relative">
+                            <a href="#">
+                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/android/newhome/2/rentappliances.jpg?v=1" class="img-fluid" alt="" />
+                                <span class="position-absolute bottom-0 start-0 ps-2 pb-2 text-white span_text">RENT APPLIANCE</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 6th main section end -->
+                    <!-- 7th main section start -->
+                    <div class="d_m8 row m-0 mt-2">
+                        <div class="mt-1">
+                            <a href="#" class="text-secondary-emphasis text-decoration-none fw-bold">Rent & Hire <i class="fa-solid fa-chevron-right float-end"></i></a>
+                        </div>
+                        <div class="col mt-1 position-relative">
+                            <a href="#">
+                                <img src="./img/lastimg.jpg" class="img-fluid" alt="" />
+                            </a>
+                            <div class="row position-absolute d-flex  bottom-0 pb-3" style="right: 104px;">
+                                <div class="col px-3">
+                                    <a href="#" class="text-decoration-none text-white">BUY</a>
+                                </div>
+                                <div class="col px-3">
+                                    <a href="#" class="text-decoration-none text-white">SELL</a>
+                                </div>
+                                <div class="col px-3">
+                                    <a href="#" class="text-decoration-none text-white">RENT</a>
+                                </div>
+                                <div class="col ps-4">
+                                    <a href="#" class="text-decoration-none text-white">PG</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 7th main section end -->
+                </main>            
+                <!--mobile screen main section end -->
+
+                <footer> <!--s_tbdr-->
+                    <!-- mobile icons start -->
+                    <div class="row text-center d-sm-none s_footer_mob">
+                        <div class="col">
+                            <a href="#"><img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/ehomeactive.svg"/><br><span class="text-primary">Home</span></a>
+                        </div>
+                        <div class="col">
+                            <a href="#"><img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/b2b-icn.svg"/><br>B2B</a>
+                        </div>
+                        <div class="col">
+                            <a href="#"><img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/jdpay-icn.svg"/><br>Pay</a>
+                        </div>
+                        <div class="col">
+                            <a href="#"><img src="https://akam.cdn.jdmagicbox.com/images/icons/android/newswbg.png" width="25px"/><br>News</a>
+                        </div>
+                        <div class="col">
+                            <a href="#"><img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/ecmmore.svg"/><br>More</a>
+                        </div>
+                    </div>
+                    <!-- mobile icons end -->
+                    <div class="d-none d-sm-block">
+                        <div class="s_footer1 s_tbdr bg-warning">
+                            f1
+                        </div>
+                        <div class="s_footer2 s_tbdr bg-warning">
+                            f2
+                        </div>
+                        <div class="s_footer3 s_tbdr bg-warning">
+                            f3
+                        </div>
+                        <div class="s_footer4 s_tbdr bg-warning">
+                            f4
+                        </div>
+                    </div>
+                </footer>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#232425;stroke-linecap:round;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="burger-icn" transform="translate(.025)">
+        <path id="Rectangle_4" fill="none" d="M0 0h26v26H0z" transform="translate(-.025)"/>
+        <g id="Group_8" transform="translate(-9.524 -18.5)">
+            <path id="Line_9" d="M0 0L18 0" class="cls-2" transform="translate(13.5 25.5)"/>
+            <path id="Line_10" d="M0 0L15 0" class="cls-2" transform="translate(13.5 31.5)"/>
+            <path id="Line_11" d="M0 0L18 0" class="cls-2" transform="translate(13.5 37.5)"/>
+        </g>
+    </g>
+</svg>
