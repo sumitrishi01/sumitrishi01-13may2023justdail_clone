@@ -5,250 +5,323 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Justdial - Local Search, Social, News, Videos, Shopping</title>
-        <link rel="stylesheet" href="./css/style.css">
         <link rel="icon" href="./fevicon.jpg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
         <link rel="icon" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="./js/script.js" defer></script>
     </head>
     <body>
+        <button class="btn s_scrolltotop bg-secondary-subtle rounded-circle position-fixed bottom-0 end-0" style="margin:0 10px 10px 0;">
+            <i class="fa-solid fa-chevron-up" style="color: #000000;"></i>
+        </button>
         <!-- Modal start-->
         <div class="modal hide" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-fullscreen">
-                    <div class="modal-content">                    
-                        <div class="modal-body p-0">
-                            <!--Login page Modal start-->
-                            <div class="d-block">
-                                <button class="btn end-0 top-0 bg-secondary bg-opacity-50 rounded-pill mt-3 me-3 text position-absolute py-1" data-bs-dismiss="modal" style="color:#ffff;font-size:15px;padding:5px 12px;font-family:'Calibri';" >Skip</button>                            
-                                <img class="img-fluid" src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/login_banner_28mar.png"/>
-                                
-                                <form class="bg-white p-4 text-center rounded-top-5 position-relative" style="margin-top:-8%;">
-                                    <h5>India's # 1 Local Search Engine</h5>                                
-                                    <div class="my-4">                                  
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">                    
+                    <div class="modal-body p-0">
+                        <!--Login page Modal start-->
+                        <div class="d-none">
+                            <button class="btn end-0 top-0 bg-secondary bg-opacity-50 rounded-pill mt-3 me-3 text position-absolute py-1" data-bs-dismiss="modal" style="color:#ffff;font-size:15px;padding:5px 12px;font-family:'Calibri';" >Skip</button>                            
+                            <img class="img-fluid" src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/login_banner_28mar.png"/>
+                            
+                            <form class="bg-white p-4 text-center rounded-top-5 position-relative" style="margin-top:-8%;">
+                                <h5>India's # 1 Local Search Engine</h5>                                
+                                <div class="my-4">                                  
                                     <div class="input-group">
-                                    <div class="input-group-text fw-bold">+91</div>
-                                    <input type="text" class="form-control form-control-lg s_input fw-semibold" id="autoSizingInputGroup" placeholder="Mobile Number">
+                                        <div class="input-group-text fw-bold">+91</div>
+                                        <input type="text" class="form-control form-control-lg s_input fw-semibold" id="autoSizingInputGroup" placeholder="Mobile Number">
                                     </div>
-                                    </div>                               
-                                    <button type="submit" class="btn btn-lg w-100 btn-primary s_input fw-semibold" disabled>Login with OTP</button>
-                                    <p class="my-3 fw-semibold text-secondary-emphasis" style="font-size:14px;">------------ or continue with ------------</p>
-                                    <button type="submit" class="btn text-dark w-100 border border-1 s_input fw-semibold">
-                                        <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/truecaller-svg.svg"/>
-                                        TrueCaller</button>
-                                </form>
-                            </div>
-                            <!--Login page Modal End-->
+                                </div>                               
+                                <button type="submit" class="btn btn-lg w-100 btn-primary s_input fw-semibold" disabled>Login with OTP</button>
+                                <p class="my-3 fw-semibold text-secondary-emphasis" style="font-size:14px;">------------ or continue with ------------</p>
+                                <button type="submit" class="btn text-dark w-100 border border-1 s_input fw-semibold">
+                                    <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/truecaller-svg.svg"/>
+                                    TrueCaller
+                                </button>
+                            </form>
+                        </div>
+                        <!--Login page Modal End-->
 
-                            <!--Admin page Modal start-->
-                            <div class="d-none">
-                                <div class="modal-header border-bottom-0 pb-0">                        
-                                    <div calss="float-start">
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
+                        <!--Admin page Modal start-->
+                        <div class="d-block">
+                            <div class="modal-header border-bottom-0 pb-0">                        
+                                <div calss="float-start">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <!-- admin pic -->
-                                <div class="row my-2 mx-0">
-                                    <div class="col-6 my-auto px-3">
-                                        <a href="#" class="btn fw-semibold fs-5">Sign in</a>
-                                    </div>
-                                    <div class="col-6 pe-5 d-flex flex-row-reverse">
-                                        <a href="#"><img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/prot/profiledefault.png" class="img-fluid" width="50px"/></a>
-                                    </div>
+                            </div>
+                            <!-- admin pic -->
+                            <div class="row my-2 mx-0">
+                                <div class="col-6 my-auto px-3">
+                                    <a href="#" class="btn fw-semibold fs-5">Sign in</a>
                                 </div>
-                                <!-- three options button -->
-                                <div class="my-3 px-3">
-                                    <a href="#" class="btn btn-sm btn-outline-secondary btn-opacity-25 rounded-pill text-dark-subtle"> Saved</a>                           
-                                    <a href="#" class="btn btn-sm btn-outline-secondary rounded-pill mx-2 text-dark-subtle">Favorites</a>
-                                    <a href="#" class="btn btn-sm btn-outline-secondary rounded-pill text-dark-subtle">Interests</a>
+                                <div class="col-6 pe-5 d-flex flex-row-reverse">
+                                    <a href="#"><img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/prot/profiledefault.png" class="img-fluid" width="50px"/></a>
                                 </div>
-                                <!-- list options -->
-                                <ul class="nav flex-column s_modal_list">
-                                    <li class="nav-item mb-1">
+                            </div>
+                            <!-- three options button -->
+                            <div class="my-3 px-3">
+                                <a href="#" class="btn btn-sm btn-outline-secondary btn-opacity-25 rounded-pill text-dark-subtle"> Saved</a>                           
+                                <a href="#" class="btn btn-sm btn-outline-secondary rounded-pill mx-2 text-dark-subtle">Favorites</a>
+                                <a href="#" class="btn btn-sm btn-outline-secondary rounded-pill text-dark-subtle">Interests</a>
+                            </div>
+                            <!-- list options -->
+                            <ul class="nav flex-column s_modal_list">
+                                <li class="nav-item mb-1">
                                     <a class="nav-link active px-0 px-3" aria-current="page" href="#">
                                         <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/Languageicn.svg" class="img-fluid"/> &nbsp;English
                                         <span class="float-end mt-2 pe-3" style="font-size:12px;">Change Language</span>
                                     </a>
-                                    </li>
-                                    <li class="nav-item my-2">
+                                </li>
+                                <li class="nav-item my-2">
                                     <a class="nav-link px-0 px-3" href="#">
-                                        <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/helpicn.svg" class="img-fluid"/> &nbsp;Customer Service</a>
-                                    </li>
-                                    <li class="nav-item my-2">
+                                    <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/helpicn.svg" class="img-fluid"/> &nbsp;Customer Service</a>
+                                </li>
+                                <li class="nav-item my-2">
                                     <a class="nav-link px-0 px-3" href="#">
                                         <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/listbusinessicn.svg" class="img-fluid"/> &nbsp;List your Business
                                         <img class="ms-2" src="https://akam.cdn.jdmagicbox.com/images/icons/gif/freeanimation2x" width="50px"/>
                                     </a>
-                                    </li>
-                                    <li class="nav-item my-2">
+                                </li>
+                                <li class="nav-item my-2">
                                     <a class="nav-link px-0 px-3">
-                                        <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/advertiseicn.svg" class="img-fluid"/> &nbsp;Advertise</a>
-                                    </li>
-                                    <li class="nav-item my-2">
+                                    <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/advertiseicn.svg" class="img-fluid"/> &nbsp;Advertise</a>
+                                </li>
+                                <li class="nav-item my-2">
                                     <a class="nav-link px-0 px-3">
-                                        <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/mytransactions-icn.svg" class="img-fluid"/> &nbsp;My Transactions</a>
-                                    </li>
-                                    <li class="nav-item my-2">
+                                    <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/mytransactions-icn.svg" class="img-fluid"/> &nbsp;My Transactions</a>
+                                </li>
+                                <li class="nav-item my-2">
                                     <a class="nav-link px-0 px-3">
-                                        <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/mytransactions-icn.svg" class="img-fluid"/> &nbsp;Wishlist</a>
-                                    </li>
-                                    <li class="nav-item my-2">
+                                    <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/mytransactions-icn.svg" class="img-fluid"/> &nbsp;Wishlist</a>
+                                </li>
+                                <li class="nav-item my-2">
                                     <a class="nav-link px-0 px-3">
-                                        <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/managequotesicn.svg" class="img-fluid"/> &nbsp;Manage Quotes</a>
-                                    </li>
-                                    <li class="nav-item my-2">
+                                    <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/managequotesicn.svg" class="img-fluid"/> &nbsp;Manage Quotes</a>
+                                </li>
+                                <li class="nav-item my-2">
                                     <a class="nav-link px-0 px-3">
-                                        <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/we-are-hiring.svg" class="img-fluid"/> &nbsp;We are hiring</a>
-                                    </li>
-                                    <li class="nav-item my-2">
+                                    <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/we-are-hiring.svg" class="img-fluid"/> &nbsp;We are hiring</a>
+                                </li>
+                                <li class="nav-item my-2">
                                     <a class="nav-link px-0 px-3">
-                                        <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/settings.svg" class="img-fluid"/> &nbsp;Settings</a>
-                                    </li>
-                                    <li class="nav-item my-2">
+                                    <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/settings.svg" class="img-fluid"/> &nbsp;Settings</a>
+                                </li>
+                                <li class="nav-item my-2">
                                     <a class="nav-link px-0 px-3">
-                                        <img src="	https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/privacyicn.svg" class="img-fluid"/> &nbsp;Privacy Policy</a>
-                                    </li>
-                                    <li class="nav-item my-2">
+                                    <img src="	https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/privacyicn.svg" class="img-fluid"/> &nbsp;Privacy Policy</a>
+                                </li>
+                                <li class="nav-item my-2">
                                     <a class="nav-link px-0 px-3">
-                                        <img src="	https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/investors_relation.svg" class="img-fluid"/> &nbsp;Investor Relations</a>
-                                    </li>
-                                    <li class="nav-item my-2">
+                                    <img src="	https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/investors_relation.svg" class="img-fluid"/> &nbsp;Investor Relations</a>
+                                </li>
+                                <li class="nav-item my-2">
                                     <a class="nav-link px-0 px-3">
-                                        <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/newproductsicn.svg" class="img-fluid"/> &nbsp;What's New</a>
-                                    </li>
-                                    <li class="nav-item my-2">
+                                    <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/newproductsicn.svg" class="img-fluid"/> &nbsp;What's New</a>
+                                </li>
+                                <li class="nav-item my-2">
                                     <a class="nav-link px-0 px-3">
-                                        <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/othersicn.svg" class="img-fluid"/> &nbsp;Other</a>
-                                    </li>
-                                    <li class="nav-item mt-1">
+                                    <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/othersicn.svg" class="img-fluid"/> &nbsp;Other</a>
+                                </li>
+                                <li class="nav-item mt-1">
                                     <a class="nav-link px-0 px-3">
-                                        <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/logouticn1.svg" class="img-fluid"/> &nbsp;Login</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!--Admin page Modal End-->
-                        </div>                    
-                    </div>
+                                    <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/logouticn1.svg" class="img-fluid"/> &nbsp;Login</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--Admin page Modal End-->
+                    </div>                    
                 </div>
+            </div>
         </div>
         <!-- Modal End-->
-        <div class="container-fluid bgcolor px-0">  <!--s_tbdr-->
-                <!-- header start -->
-                <header class="sticky-top bg-white border-bottom">  <!---->
-                    <div class="row h-100 py-3 mx-0">
-                        <div class="col-sm-2 col-4 my-auto"> <!---->
-                            <a href="#"><img src="./img/jdlogosvg.svg" class="img-fluid" width="90px"/></a>
+        <!--Login Button Modal Section start-->
+        <div class="modal hide" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="backdrop-filter: blur(15px);">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content p-2 rounded-4">
+                <div class="modal-header border-bottom-0 mb-0 pb-0">
+                  <div class="row w-100 m-0">
+                    <div class="col-3 border-end my-auto py-1">
+                        <img class="img-fluid" src="./img/jdlogosvg.svg" width="90px">
+                    </div>
+                    <div class="col-8 lh-base">
+                        <h5 style="margin-top:20px; font-weight:900;">Welcome</h4>
+                        <p class="text-dark-emphasis pt-1">Login for a seamless experience</p>
+                    </div>
+                    <div class="col-1 d-flex align-items-end mb-5 pb-3">
+                        <button type="button" class="btn-close btn shadow-none btn-light rounded-circle px-3 text-dark" data-bs-dismiss="modal" aria-label="Close"></button>                        
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-body">                  
+                    <form class="bg-white text-center">
+                        <div class="mb-3 px-3">                                  
+                            <div class="input-group border border-0 border-bottom pb-1">
+                                <div class="input-group-text fw-bold rounded-0 border border-0 bg-transparent">+91</div>
+                                <input type="number" class="form-control form-control-sm s_input fw-semibold rounded-0 border border-0 border-start shadow-none" id="autoSizingInputGroup" placeholder="Mobile Number">
+                            </div>
                         </div>
-                        <!-- small screen Notification section start -->
-                        <div class="col-sm-3 col-8">  <!---->
-                            <div class="float-end d-block d-sm-none">
-                                <a href="#" class="btn btn-sm bg-primary rounded-pill fw-semibold" style="color:#ffff;font-size:11px;padding:5.5px 13px;font-family:'sans-serif';" >OPEN APP</a>
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="./img/notify_icon.svg" class="mx-2" width="23px"/></a>
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="./img/bar.svg"/></a>
-                            </div>                        
-                        </div>
-                        <!-- small screen Notification section end -->
-                        <div class="col-sm-7 col-12 s_menu my-auto bg-white">
-                            <!-- Small screen searchbar start -->
-                            <form class="d-sm-none d-md-none mx-1 pt-2">                            
-                                <div class="my-2 d-flex border border-dark border-1 rounded-3">                              
-                                    <button type="button" class="btn pe-2 bg-white border-0 rounded-circle">
-                                        <img src="./img/srch.svg"/>
-                                    </button>
-                                    <input type="search" placeholder="Spas & Salons" class="fw-semibold opacity-75 form-control border border-0 shadow-none px-0">
-                                    <button type="button" class="btn px-2 bg-white border-0 rounded-circle">
-                                        <img src="./img/mic.svg" width="21px"/>
-                                    </button>
-                                </div>                            
-                            </form>
-                            <!-- Small screen searchbar End -->
-                            <!--Large screen nav section start -->
-                            <nav class="d-none d-sm-block">
-                                <ul class="nav ms-4 s_menu">
-                                    <li class="nav-item">
+                        <button type="submit" class="btn btn-sm btn-primary s_input rounded-3 fw-semibold my-4" style="width: 60%;" disabled>Login with OTP</button><br>
+                        <div class="d-grid gap my-4">
+                            <div class="s_line">
+                                <span class="bg-secondary-subtle rounded-pill my-3 fw-semibold text-black-50 pt-1 pb-1" style="font-size:10px;">
+                                    Or Login Using
+                                </span>
+                            </div>
+                        </div>                        
+                    </form>
+                </div>
+                <div class="modal-footer border border-0 mx-auto">
+                  <button type="button" class="btn btn-light border rounded-pill px-4 py-2">
+                    <img class="img-fluid m-1" src="https://dineshmehra86.github.io/13May2023-justDial/img/icons/google.svg" width="16px" alt="">
+                    <span class="lh-sm" style="font-size: 13px;">Google</span>
+                  </button>
+                  <button type="button" class="btn btn-light border rounded-pill px-4 py-2">
+                    <img class="img-fluid" src="https://dineshmehra86.github.io/13May2023-justDial/img/icons/fb.svg" width="18px" alt="">
+                    <span class="lh-sm" style="font-size: 13px;">Facebook</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+        </div>
+        <!--Login Button Modal Section End-->
+        <div class="container-fluid bgcolor px-0">
+            <!-- header start -->
+            <header class="sticky-top bg-white border-bottom">
+                <div class="row h-100 py-3 mx-0 px-0">
+                    <div class="col-sm-2 col-4 col-md-4  my-auto ps-4"  id="pagelogo">
+                        <a href="#"><img src="./img/jdlogosvg.svg" class="img-fluid" width="85px"/></a>
+                    </div>
+                    <!-- small screen Notification section start -->
+                    <div class="col-sm-10 col-8 col-md-8">  <!---->
+                        <div class="float-end d-block d-lg-none">
+                            <a href="#" class="btn btn-sm bg-primary rounded-pill fw-semibold" style="color:#ffff;font-size:11px;padding:5.5px 13px;font-family:'sans-serif';" >OPEN APP</a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="./img/notify_icon.svg" class="mx-2" width="23px"/></a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="./img/bar.svg"/></a>
+                        </div>                        
+                    </div>
+                    <!-- small screen Notification section end -->
+                    <div class="col-sm-12 col-12 col-md-12 s_menu my-auto bg-white">
+                        <!-- Small screen searchbar start -->
+                        <form class="d-block d-lg-none mx-1 pt-2 bg-white">                            
+                            <div class="my-2 d-flex rounded-3 border border-1 border-black">                              
+                                <button type="button" class="btn pe-2 bg-whit border-0 rounded-circle">
+                                    <img src="./img/srch.svg"/>
+                                </button>
+                                <input type="search" placeholder="Spas & Salons" class="fw-semibold opacity-75 form-control border border-0 shadow-none px-0">
+                                <button type="button" class="btn px-2 bg-whit border-0 rounded-circle">
+                                    <img src="./img/mic.svg" width="21px"/>
+                                </button>
+                            </div>                            
+                        </form>
+                        <!-- Small screen searchbar End -->
+                        <!--Large screen nav section start -->
+                        <nav class="d-none d-sm-block">
+                            <ul class="nav ms-4 s_menu" id="s_menu">
+                                <li class="nav-item">
                                     <a class="nav-link active px-1 py-0" aria-current="page" href="#">
                                         <img src="./img/nav_language_icon.svg" width="17px"/> English
                                         <img src="./img/down_arrow5.svg"/>                                
                                     </a>                                
-                                        <ul class="s_submenu position-absolute list-unstyled border border rounded-1">
-                                            <li><a href="#" class="text-decoration-none">&nbsp;&nbsp;&nbsp; Hindi</a></li>
-                                            <li><a href="#" class="text-decoration-none">&nbsp;&nbsp;&nbsp; Marathi</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
+                                    <ul class="s_submenu position-absolute list-unstyled border border rounded-1">
+                                        <li><a href="#" class="text-decoration-none">&nbsp;&nbsp;&nbsp; Hindi</a></li>
+                                        <li><a href="#" class="text-decoration-none">&nbsp;&nbsp;&nbsp; Marathi</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link px-2 py-0 text-secondary-emphasis" href="#">We are Hiring</a>
-                                    </li>
-                                    <li class="nav-item">
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link px-2 py-0 text-secondary-emphasis" href="#">Investor Relations</a>
-                                    </li>
-                                    <li class="nav-item">
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link px-1 py-0 text-secondary-emphasis" href="#"><img src="./img/nav_advertise_icon.svg" width="17px"/> Advertise</a>
-                                    </li>
-                                    <li class="nav-item">
-                                    <a class="nav-link px-2 py-0 text-secondary-emphasis" href="#"><img src="./img/nav_listing_icon.svg" width="17px"/> Free Listing</a>
-                                    </li>
-                                    <li class="nav-item">
+                                </li>
+                                <li class="nav-item mx-1 position-relative">
+                                    <a class="nav-link px-1 py-0 text-dark" href="#">
+                                        <img class="img-fluid" src="./img/nav_listing_icon.svg" width="17px"/>
+                                        Free Listing
+                                    </a>
+                                    <a href="#" class="s_busi text-decoration-none">
+                                      BUSSINESS
+                                    </a>
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link px-2 py-0 text-secondary-emphasis" href="#"><img src="./img/notify_icon.svg" width="23px"/></a>
-                                    </li>
-                                    <li class="nav-item">
-                                    <a class="nav-link px-0 py-0 text-secondary-emphasis" href="#"><img src="./img/jd_login_icon.svg" width="27px"/>Login / Sign Up</a>
-                                    </li>
-                                </ul>
-                            </nav> 
-                            <!--Large screen nav section end -->
-                        </div>
-                    </div>            
-                </header>                
-                <!-- header end -->
-
-                <!--Large screen main section start-->                
-                <main class="s_LS_main d-none d-lg-block mt-3 px-4">
-                    <!--s_LS_main1 section start-->
-                    <div class="row m-0 s_LS_main1" style="height:115px;">
-                        <div class="col-8 bg-white">
-                            <h3 class="fw-bold" style="font-family: Arial, Helvetica, sans-serif;">Search across ......</h3>
-                            <div class="row">
-                                <div class="col-3 px-0 mx-3 d-flex border border-2 border-secondary rounded-1 shadow-sm bg-secondary-subtle">
-                                    <button type="button" class="btn border-0 rounded-1 px-2">
-                                        <i class="fa-solid fa-location-dot" style="color: #898a8c;"></i>
-                                    </button>
-                                    <input type="search" class="form-control py-2 rounded-0 px-0 bg-secondary-subtle shadow-none border-0" placeholder="Mumbai" id="exampleInput">  
-                                </div>
-                                <div class="col-7 p-0">
-                                    <form>                            
-                                        <div class="d-flex border border-2 border-secondary rounded-1 shadow-sm">                              
-                                            <input type="search" placeholder="Search for Spas & Salons" class="fw-semibold py-2 form-control border border-0 shadow-none px-2 rounded-0">
-                                            <button type="button" class="btn bg-white border-0 rounded-0 px-0">
-                                                <img src="./img/mic.svg"/>
-                                            </button>
-                                            <button type="button" class="btn border-0 rounded-1 s_LS_Ficon">
-                                                <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
-                                            </button>                                          
-                                        </div>                                                                    
-                                    </form>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link px-0 py-0 text-secondary-emphasis" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2"><img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/jd_login_icon.svg" width="27px"/>Login / Sign Up</a>
+                                </li>
+                            </ul>
+                        </nav> 
+                        <!--Large screen nav section end -->
+                    </div>
+                </div>            
+            </header>                
+            <!-- header end -->
+            <!--Large screen main section start-->                
+            <main class="s_LS_main d-none d-lg-block mt-3 px-4">
+                <!--s_LS_main1 section start-->
+                <div class="row m-0 s_LS_main1" style="height:100px;">
+                    <div class="col-8 bg-white">
+                        <div class="row mx-1" style="height:30px; overflow: hidden;">
+                            <div class="col-3 h-100 px-1 py-0">
+                                <h4 class="fw-bold">Search across</h4>
+                            </div>
+                            <div class="col-9">
+                                <div class="a_animation" style="margin-left: -5%;">
+                                    <h4 class="fw-bold d-block h-100 pb-1">‘3.4 Crore+‘ <span class="text-primary">Businesses</span></h4>
+                                    <h4 class="fw-bold d-block h-100 pt-2">‘2.8 Crore+’ <span class="text-primary">Product & Services</span></h4>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-4">
-                            <button class="btn btn-sm btn-outline-dark position-relative float-end me-3 mt-4 fw-semibold bg-white text-dark"> Download App
-                                <img class="img-fluid position-absolute btn btn-sm btn-outline-dark px-0 bg-white" style="height:52px; width:25px; top:-12px;" src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/getapp_jd.gif"/>
-                            </button>
+                        </div>                            
+                        <div class="row">
+                            <div class="col-3 px-0 mx-3 d-flex border border-2 border-secondary rounded-1 shadow-sm bg-secondary-subtle">
+                                <button type="button" class="btn border-0 rounded-1 px-2">
+                                    <i class="fa-solid fa-location-dot" style="color: #898a8c;"></i>
+                                </button>
+                                <input type="search" class="form-control py-2 rounded-0 px-0 bg-secondary-subtle shadow-none border-0 s_lS_input" placeholder="Mumbai" id="exampleInput">  
+                            </div>
+                            <div class="col-7 p-0">
+                                <form>                            
+                                    <div class="d-flex border border-2 border-secondary rounded-1 shadow-sm">                              
+                                        <input type="search" placeholder="Search for Spas & Salons" class="fw-semibold py-2 form-control s_lS_input border border-0 shadow-none px-2 rounded-0">
+                                        <button type="button" class="btn bg-white border-0 rounded-0 px-0">
+                                            <img src="./img/mic.svg"/>
+                                        </button>
+                                        <button type="button" class="btn border-0 rounded-1 s_LS_Ficon">
+                                            <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                                        </button>                                          
+                                    </div>                                                                    
+                                </form>
+                            </div>
                         </div>
                     </div>
-                    <!--s_LS_main1 section end-->
-                    <!--s_LS_main2 section start-->
-                    <div class="row h-100 mx-0">
-                        <!-- banner section start -->
-                        <div class="col-6 s_LS_main2 pe-2 rounded-3"><!---->
-                            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-indicators">
-                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active rounded-circle" aria-current="true" aria-label="Slide 1"></button>
-                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" class="rounded-circle" aria-label="Slide 2"></button>
-                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" class="rounded-circle" aria-label="Slide 3"></button>
-                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" class="rounded-circle" aria-label="Slide 4"></button>
-                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" class="rounded-circle" aria-label="Slide 5"></button>
-                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" class="rounded-circle" aria-label="Slide 6"></button>
-                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" class="rounded-circle" aria-label="Slide 7"></button>
-                                </div>
-                                <div class="carousel-inner rounded-4">
+                    <div class="col-4">
+                        <button class="btn btn-sm btn-outline-dark position-relative float-end me-3 mt-4 fw-semibold bg-white text-dark" style="font-size: 13px;"> Download App
+                            <img class="img-fluid position-absolute btn btn-sm btn-outline-dark px-0 bg-white" style="height:52px; width:25px; top:-12px;" src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/getapp_jd.gif"/>
+                        </button>
+                    </div>
+                </div>
+                <!--s_LS_main1 section end-->
+                <!--s_LS_main2 section start-->
+                <div class="row h-100 mx-0 border-end border-start border-white"><!--Here I use border for some reason-->
+                    <!-- banner section start -->
+                    <div class="col-6 s_LS_main2 pe-2 rounded-3"><!---->
+                        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active rounded-circle" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" class="rounded-circle" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" class="rounded-circle" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" class="rounded-circle" aria-label="Slide 4"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" class="rounded-circle" aria-label="Slide 5"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" class="rounded-circle" aria-label="Slide 6"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" class="rounded-circle" aria-label="Slide 7"></button>
+                            </div>
+                            <div class="carousel-inner rounded-3">
                                 <div class="carousel-item active" data-bs-interval="10000">
                                     <img class="img-fluid" src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/banner_hotels.png?v=1.0" class="d-block w-100" alt="...">
                                 </div>
@@ -270,414 +343,1362 @@
                                 <div class="carousel-item">
                                     <img class="img-fluid" src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/banner_webflight_23feb.png" class="d-block w-100" alt="...">
                                 </div>
-                                </div>
-                                <button class="carousel-control-prev s_pn ms-2" style="top:47%;" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                            </div>
+                            <button class="carousel-control-prev s_pn ms-2" style="top:47%;" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next s_pn me-2" style="top:47%;" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                                <span class="carousel-control-next-icon fw-semibold" aria-hidden="true"></span>
+                            </button>
+                            <button class="carousel-control-next s_pn me-2" style="top:47%;" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Next</span>
-                                </button>
-                            </div> 
+                            </button>
+                        </div> 
+                    </div>
+                    <!-- banner section end -->
+                    <div class="col-6">
+                        <div class="row h-100 text-center">
+                            <a href="#" class="col-3 ps-2 pe-2 text-decoration-none position-relative">
+                                <div class="a_imghover s_b2ba1 h-100 position-relative rounded-3 overflow-hidden">
+                                    <span class="position-absolute s_text ms-3 mt-2 fs-18 fw-bold text-white">B2B</span>
+                                    <span class="position-absolute ms-3 mt-6 fs-12 text-white text-start">Quick<br>Quotes</span>
+                                    <img class="img-fluid pt-1 h-100" src="https://akam.cdn.jdmagicbox.com/images/icons/website/newhome/1/b2b.png?v=1.01?w=1920&q=75"/>
+                                    <span class="s_b2b1 shadow bottom-0 start-0 rounded-end px-2 position-absolute" style="margin:20px 0 20px 8px;">
+                                        <span class="fs-13">Explore</span> <i class="fa-solid fa-chevron-right fa-sm"></i>
+                                    </span>
+                                </div>
+                            </a>
+                            <a href="#" class="col-3 ps-2 pe-2 text-decoration-none position-relative">
+                                <div class="a_imghover s_b2ba2 h-100 position-relative rounded-3 overflow-hidden">
+                                    <span class="position-absolute s_text ms-3 mt-2 fs-18 fw-bold text-white text-start">Repairs & <br> Services</span>
+                                    <span class="position-absolute ms-3 mt-7 fs-12 text-white text-start">Get<br>Nearest<br>Vendor</span>
+                                    <img class="img-fluid pt-1 h-100" src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/web_repair_image.png?v=1.0?w=640&q=75"/>
+                                    <span class="s_b2b2 shadow bottom-0 start-0 rounded-end px-2 position-absolute" style="margin:20px 0 20px 8px;">
+                                        <span class="fs-13">Explore</span> <i class="fa-solid fa-chevron-right fa-sm"></i>
+                                    </span>
+                                </div>
+                            </a>
+                            <a href="#" class="col-3 ps-2 pe-2 text-decoration-none position-relative">
+                                <div class="a_imghover s_b2ba3 h-100 position-relative rounded-3 overflow-hidden">
+                                    <span class="position-absolute s_text ms-3 mt-2 fs-18 fw-bold text-white text-start">Real<br>ESTATE</span>
+                                    <span class="position-absolute ms-3 mt-7 fs-12 text-white text-start">Properties<br>Online</span>
+                                    <img class="img-fluid pt-1 h-100" src="https://akam.cdn.jdmagicbox.com/images/icons/website/newhome/1/realestate.png?v=1.0?w=1920&q=75"/>
+                                    <span class="s_b2b3 shadow bottom-0 start-0 rounded-end px-2 position-absolute" style="margin:20px 0 20px 8px;">
+                                        <span class="fs-13">Explore</span> <i class="fa-solid fa-chevron-right fa-sm"></i>
+                                    </span>
+                                </div>                                   
+                            </a>
+                            <a href="#" class="col-3 h-100 ps-2 pe-2 pb-0 position-relative text-decoration-none">
+                                <div class="a_imghover s_b2ba4 h-100 position-relative rounded-3 overflow-hidden">
+                                    <span class="position-absolute s_text ms-3 mt-2 fs-18 fw-bold text-white text-start">DOCTORS</span>
+                                    <span class="position-absolute ms-3 mt-6 fs-12 text-white text-start">Book<br>Now</span>
+                                    <img class="img-fluid pt-1 h-100" src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/web_doctor_image.png?v=1.0?w=1920&q=75"/>
+                                    <span class="s_b2b4 shadow bottom-0 start-0 rounded-end px-2 position-absolute" style="margin:20px 0 20px 8px;">
+                                        <span class="fs-13">Explore</span> <i class="fa-solid fa-chevron-right fa-sm"></i>
+                                    </span>
+                                </div>                                    
+                            </a>
                         </div>
-                        <!-- banner section end -->
-                        <div class="col-6">
-                            <div class="row h-100 text-center">
-                                <div class="col-3 px-2"><!---->
-                                    <img class="img-fluid h-100 rounded-4" src="./img/B2B_Bn.png"/>
-                                </div>
-                                <div class="col-3 px-2 p-0"><!---->
-                                    <img class="img-fluid h-100 rounded-4" src="./img/Xxperts_Bn.png"/>
-                                </div>
-                                <div class="col-3 px-2 p-0"><!---->
-                                    <img class="img-fluid h-100 rounded-4" src="./img/RealEstate.png"/>
-                                </div>
-                                <div class="col-3 px-2 p-0"><!---->
-                                    <img class="img-fluid h-100 rounded-4" src="./img/Doctors_bn.png"/>
+                    </div>
+                </div>
+                <!--s_LS_main2 section end-->
+
+                <!--s_LS_main3 section start-->                
+                <div class="row text-center s_LS_main3 my-5">
+                    <div class="col">
+                        <a href="#"><img class="img-fluid mb-1" src="./img/icons/restaurant-2022.svg"/>
+                        Restaurants</a>
+                    </div>
+                    <div class="col">
+                        <a href="#"><img class="img-fluid mb-1" src="./img/icons/hotel-2022.svg"/>
+                        Hotels</a>
+                    </div>
+                    <div class="col">
+                        <a href="#"><img class="img-fluid mb-1" src="./img/icons/realestate.svg"/>
+                        <br>Real Estate</a>
+                    </div>
+                    <div class="col">
+                        <a href="#"><img class="img-fluid mb-1" src="./img/icons/homedecor.svg"/>
+                        Home Decor</a>
+                    </div>
+                    <div class="col">
+                        <a href="#"><img class="img-fluid mb-1" src="./img/icons/education.svg"/>
+                        Education</a>
+                    </div>
+                    <div class="col">
+                        <a href="#"><img class="img-fluid mb-1" src="./img/icons/renthire.svg"/>
+                        <br>Rent & Hire</a>
+                    </div>
+                    <div class="col">
+                        <a href="#"><img class="img-fluid mb-1" src="./img/icons/hospital_2023.svg"/>
+                        Hospitals</a>
+                    </div>
+                    <div class="col">
+                        <a href="#"><img class="img-fluid mb-1" src="./img/icons/contractor-2022.svg"/>
+                        Contractors</a>
+                    </div>
+                    <div class="col">
+                        <a href="#"><img class="img-fluid mb-1" src="./img/icons/pet_shops_2023.svg"/>
+                        <br>Pet Shops</a>
+                    </div>
+                    <div class="col">
+                        <a href="#"><img class="img-fluid mb-1" src="./img/icons/pg-hostels-rooms.svg"/>
+                        PG/Hostels</a>
+                    </div>
+                </div>
+                <div class="row text-center s_LS_main3 my-5"> 
+                    <div class="col">
+                        <a href="#"><img class="img-fluid mb-1" src="./img/icons/estate-agent.svg"/>
+                        Estate</a>
+                    </div>
+                    <div class="col">
+                        <a href="#"><img class="img-fluid mb-1" src="./img/icons/dentist_2023.svg"/>
+                        Dentists</a>
+                    </div>
+                    <div class="col">
+                        <a href="#"><img class="img-fluid mb-1" src="./img/icons/gym_2023.svg"/>
+                        <br>GYM</a>
+                    </div>
+                    <div class="col">
+                        <a href="#"><img class="img-fluid mb-1" src="./img/icons/consultants_2023.svg"/>
+                        Consultants</a>
+                    </div>
+                    <div class="col">
+                        <a href="#"><img class="img-fluid mb-1" src="./img/icons/eventorganizers.svg"/>
+                        <br>Event Organisers</a>
+                    </div>
+                    <div class="col">
+                        <a href="#"><img class="img-fluid mb-1" src="./img/icons/driving_school_2023.svg"/>
+                        Driving Schools</a>
+                    </div>
+                    <div class="col">
+                        <a href="#"><img class="img-fluid mb-1" src="./img/icons/packers_movers_2023.svg"/>
+                        Packers & Movers</a>
+                    </div>
+                    <div class="col">
+                        <a href="#"><img class="img-fluid mb-1" src="./img/icons/courier_2023.svg"/>
+                        Courier Service</a>
+                    </div>
+                    <div class="col">
+                        <a href="#"><img class="img-fluid mb-1" src="./img/icons/travel_2023.svg"/>
+                        <br>Travel</a>
+                    </div>
+                    <div class="col">
+                        <a href="#"><img class="img-fluid mb-1 border border-dark" src="./img/icons/hk_showmore.svg"/>
+                        Popular Categories</a>
+                    </div>
+                </div>
+                <!--s_LS_main3 section end-->
+
+                <!--s_LS_main4 section start-->
+                <div class="row m-0">
+                    <div class="col-6">
+                        <div class="border border-dark-subtle rounded-3">
+                            <a href="#" class="text-decoration-none">
+                                <div class="row mx-auto my-auto p-3">
+                                    <h6 class="fw-bold text-dark"><a href="#1" class="text-decoration-none text-dark">Wedding Requisites</a></h3>
+                                    <div class="col-4">
+                                        <figure class="figure">
+                                            <a href="#11" class="text-decoration-none">
+                                                <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/hkim_banquethall.png?w=256&q=75" class="figure-img img-fluid rounded" alt="...">
+                                                <figcaption class="figure-caption text-center text-dark">Banquet Halls</figcaption>
+                                            </a>
+                                        </figure>
+                                    </div>
+                                    <div class="col-4">
+                                        <figure class="figure">
+                                            <a href="#111" class="text-decoration-none">
+                                                <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/hkim_bridalrequisites.png?w=256&q=75" class="figure-img img-fluid rounded" alt="...">
+                                                <figcaption class="figure-caption text-center text-dark">Bridal Requisites</figcaption>
+                                            </a>
+                                        </figure>
+                                    </div>
+                                    <div class="col-4">
+                                        <figure class="figure">
+                                            <a href="#1111" class="text-decoration-none">
+                                                <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/hkim_caterers.png?w=256&q=75" class="figure-img img-fluid rounded" alt="...">
+                                                <figcaption class="figure-caption text-center text-dark">Caterers</figcaption>
+                                            </a>
+                                        </figure>
+                                    </div>
+                                </div>          
+                            </a>                                
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="border border-dark-subtle rounded-3">
+                            <a href="#" class="text-decoration-none">
+                                <div class="row mx-auto my-auto p-3">
+                                    <h6 class="fw-bold text-dark"><a href="#2" class="text-decoration-none text-dark">Beauty & Spa</a></h3>
+                                    <div class="col-4">
+                                        <figure class="figure">
+                                            <a href="#22" class="text-decoration-none">
+                                                <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/hkim_salons.png?w=256&q=75" class="figure-img img-fluid rounded" alt="...">
+                                                <figcaption class="figure-caption text-center text-dark">Beauty Parlours</figcaption>
+                                            </a>
+                                        </figure>
+                                    </div>
+                                    <div class="col-4">
+                                        <figure class="figure">
+                                            <a href="#222" class="text-decoration-none">
+                                                <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/hkim_spamassage.png?w=256&q=75" class="figure-img img-fluid rounded" alt="...">
+                                                <figcaption class="figure-caption text-center text-dark">Spa & Massages</figcaption>
+                                            </a>
+                                        </figure>
+                                    </div>
+                                    <div class="col-4">
+                                        <figure class="figure">
+                                            <a href="#2222" class="text-decoration-none">
+                                                <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/hkim_beautyparlour.png?w=256&q=75" class="figure-img img-fluid rounded" alt="...">
+                                                <figcaption class="figure-caption text-center text-dark">Salons</figcaption>
+                                            </a>
+                                        </figure>
+                                    </div>
+                                </div>          
+                            </a>                                
+                        </div>
+                    </div>
+                    <div class="col-6 my-4">
+                        <div class="border border-dark-subtle rounded-3">
+                            <a href="#" class="text-decoration-none">
+                                <div class="row mx-auto my-auto p-3">
+                                    <h6 class="fw-bold text-dark"><a href="#3" class="text-decoration-none text-dark">Repairs & Services</a></h3>
+                                    <div class="col-4">
+                                        <figure class="figure">
+                                            <a href="#33" class="text-decoration-none">
+                                                <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/hkim_acrepair.png?w=256&q=75" class="figure-img img-fluid rounded" alt="...">
+                                                <figcaption class="figure-caption text-center text-dark">AC Service</figcaption>
+                                            </a>
+                                        </figure>
+                                    </div>
+                                    <div class="col-4">
+                                        <figure class="figure">
+                                            <a href="#333" class="text-decoration-none">
+                                                <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/hkim_carservice.png?w=256&q=75" class="figure-img img-fluid rounded" alt="...">
+                                                <figcaption class="figure-caption text-center text-dark">Car Service</figcaption>
+                                            </a>
+                                        </figure>
+                                    </div>
+                                    <div class="col-4">
+                                        <figure class="figure">
+                                            <a href="#3333" class="text-decoration-none">
+                                                <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/hkim_bikeservice.png?w=256&q=75" class="figure-img img-fluid rounded" alt="...">
+                                                <figcaption class="figure-caption text-center text-dark">Bike Service</figcaption>
+                                            </a>
+                                        </figure>
+                                    </div>
+                                </div>          
+                            </a>                                
+                        </div>
+                    </div>
+                    <div class="col-6 my-4">
+                        <div class="border border-dark-subtle rounded-3">
+                            <a href="#" class="text-decoration-none">
+                                <div class="row mx-auto my-auto p-3">
+                                    <h6 class="fw-bold text-dark"><a href="#4" class="text-decoration-none text-dark">Daily Needs</a></h3>
+                                    <div class="col-4">
+                                        <figure class="figure">
+                                            <a href="#44" class="text-decoration-none">
+                                                <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/hkim_movies.png?w=256&q=75" class="figure-img img-fluid rounded" alt="...">
+                                                <figcaption class="figure-caption text-center text-dark">Movies</figcaption>
+                                            </a>
+                                        </figure>
+                                    </div>
+                                    <div class="col-4">
+                                        <figure class="figure">
+                                            <a href="#444" class="text-decoration-none">
+                                                <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/hkim_grocery.png?w=256&q=75" class="figure-img img-fluid rounded" alt="...">
+                                                <figcaption class="figure-caption text-center text-dark">Grocery</figcaption>
+                                            </a>
+                                        </figure>
+                                    </div>
+                                    <div class="col-4">
+                                        <figure class="figure">
+                                            <a href="#4444" class="text-decoration-none">
+                                                <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/hkim_electrician.png?w=256&q=75" class="figure-img img-fluid rounded" alt="...">
+                                                <figcaption class="figure-caption text-center text-dark">Electricians</figcaption>
+                                            </a>
+                                        </figure>
+                                    </div>
+                                </div>          
+                            </a>                                
+                        </div>
+                    </div>
+                </div>
+                <!--s_LS_main4 section end-->
+                
+                <!--s_LS_main5 section start-->
+                <div class="row m-0">
+                    <div class="col-12">
+                        <div class="row m-0 border border-dark-subtle rounded-top" style="padding:35px;">
+                            <div class="col-3">
+                                <h4 class="fw-bold text-dark">Bills & Recharge</h4>
+                                <div><p style="font-size: 11px;">Pay your bills & recharge instantly with<br>Justdial</p></div>
+                                <div><a href="#" class="text-decoration-none fw-bold" style="font-size: 12px;">Explore More</a></div>
+                            </div>
+                            <div class="col-9 s_LS_main4">
+                                <div class="row text-center">
+                                    <div class="col">
+                                        <a href="#"><img class="img-fluid mb-2" src="./img/icons/bt_mobile.svg"/><br>
+                                        Mobile</a>
+                                    </div>
+                                    <div class="col">
+                                        <a href="#"><img class="img-fluid mb-2" src="./img/icons/bt_electricity.svg"/><br>
+                                        Electricity</a>
+                                    </div>
+                                    <div class="col">
+                                        <a href="#"><img class="img-fluid mb-2" src="./img/icons/bt_dth.svg"/>
+                                        <br>DTH</a>
+                                    </div>
+                                    <div class="col">
+                                        <a href="#"><img class="img-fluid mb-2" src="./img/icons/bt_water.svg"/><br>
+                                        Water</a>
+                                    </div>
+                                    <div class="col">
+                                        <a href="#"><img class="img-fluid mb-2" src="./img/icons/bt_gas.svg"/><br>
+                                        Gas</a>
+                                    </div>
+                                    <div class="col">
+                                        <a href="#"><img class="img-fluid mb-2" src="./img/icons/bt_insurance.svg"/><br>
+                                        Insurance</a>
+                                    </div>                                                                                
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!--s_LS_main2 section end-->
-
-                    <!--s_LS_main3 section start-->                
-                    <div class="row text-center s_LS_main3 my-5">
-                        <div class="col">
-                            <a href="#"><img class="img-fluid" src="./img/icons/restaurant-2022.svg"/>
-                            Restaurants</a>
-                        </div>
-                        <div class="col">
-                            <a href="#"><img class="img-fluid" src="./img/icons/hotel-2022.svg"/>
-                            Hotels</a>
-                        </div>
-                        <div class="col">
-                            <a href="#"><img class="img-fluid" src="./img/icons/realestate.svg"/>
-                            <br>Real Estate</a>
-                        </div>
-                        <div class="col">
-                            <a href="#"><img class="img-fluid" src="./img/icons/homedecor.svg"/>
-                            Home Decor</a>
-                        </div>
-                        <div class="col">
-                            <a href="#"><img class="img-fluid" src="./img/icons/education.svg"/>
-                            Education</a>
-                        </div>
-                        <div class="col">
-                            <a href="#"><img class="img-fluid" src="./img/icons/renthire.svg"/>
-                            <br>Rent & Hire</a>
-                        </div>
-                        <div class="col">
-                            <a href="#"><img class="img-fluid" src="./img/icons/hospital_2023.svg"/>
-                            Hospitals</a>
-                        </div>
-                        <div class="col">
-                            <a href="#"><img class="img-fluid" src="./img/icons/contractor-2022.svg"/>
-                            Contractors</a>
-                        </div>
-                        <div class="col">
-                            <a href="#"><img class="img-fluid" src="./img/icons/pet_shops_2023.svg"/>
-                            <br>Pet Shops</a>
-                        </div>
-                        <div class="col">
-                            <a href="#"><img class="img-fluid" src="./img/icons/pg-hostels-rooms.svg"/>
-                            PG/Hostels</a>
-                        </div>
-                    </div>
-                    <div class="row text-center s_LS_main3 my-5"> 
-                        <div class="col">
-                            <a href="#"><img class="img-fluid" src="./img/icons/estate-agent.svg"/>
-                            Estate</a>
-                        </div>
-                        <div class="col">
-                            <a href="#"><img class="img-fluid" src="./img/icons/dentist_2023.svg"/>
-                            Dentists</a>
-                        </div>
-                        <div class="col">
-                            <a href="#"><img class="img-fluid" src="./img/icons/gym_2023.svg"/>
-                            <br>GYM</a>
-                        </div>
-                        <div class="col">
-                            <a href="#"><img class="img-fluid" src="./img/icons/consultants_2023.svg"/>
-                            Consultants</a>
-                        </div>
-                        <div class="col">
-                            <a href="#"><img class="img-fluid" src="./img/icons/eventorganizers.svg"/>
-                            <br>Event Organisers</a>
-                        </div>
-                        <div class="col">
-                            <a href="#"><img class="img-fluid" src="./img/icons/driving_school_2023.svg"/>
-                            Driving Schools</a>
-                        </div>
-                        <div class="col">
-                            <a href="#"><img class="img-fluid" src="./img/icons/packers_movers_2023.svg"/>
-                            Packers & Movers</a>
-                        </div>
-                        <div class="col">
-                            <a href="#"><img class="img-fluid" src="./img/icons/courier_2023.svg"/>
-                            Courier Service</a>
-                        </div>
-                        <div class="col">
-                            <a href="#"><img class="img-fluid" src="./img/icons/travel_2023.svg"/>
-                            <br>Travel</a>
-                        </div>
-                        <div class="col">
-                            <a href="#"><img class="img-fluid border border-dark" src="./img/icons/hk_showmore.svg"/>
-                            Popular Categories</a>
-                        </div>
-                    </div>
-                    <!--s_LS_main3 section end-->
-
-                </main>
-                <!--Large screen main section end-->
-
-                <!--moblie screen main section start -->
-                <main class="s_main d-xl-none d-lg-none">
-                    <!-- main section start -->
-                    <div class="row m-0 text-center s_main1">                    
-                        <div class="col-3 my-auto">
-                            <a href="#">
-                                <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newhotkey/b2b_2x_wog-15dec.gif" class="img-fluid" width="50px"/>
-                                <p class="fw-semibold opacity-75">B2B</p>
-                            </a>
-                        </div>
-                        <div class="col-3  my-auto">
-                            <a href="#">
-                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/finddoctors.svg"/>
-                                <p class="fw-semibold opacity-75">Doctors</p>
-                            </a>
-                        </div>
-                        <div class="col-3  my-auto">
-                            <a href="#">
-                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/travelbookings.svg"/>
-                                <p class="fw-semibold opacity-75">Travel</p>
-                            </a>
-                        </div>                    
-                        <div class="col-3  my-auto">
-                            <a href="#">
-                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/beauty.svg"/>
-                                <p class="fw-semibold opacity-75">Beauty</p>
-                            </a>
-                        </div>
-
-                        <div class="col-3  my-auto">
-                            <a href="#">
-                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/android/new/shop_online.svg"/>
-                                <p class="fw-semibold opacity-75">Shop Online</p>
-                            </a>
-                        </div>
-                        <div class="col-3  my-auto">
-                            <a href="#">
-                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/consultants.svg"/>
-                                <p class="fw-semibold opacity-75">Consultants</p>
-                            </a>
-                        </div>
-                        <div class="col-3  my-auto">
-                            <a href="#">
-                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/renthire.svg"/>
-                                <p class="fw-semibold opacity-75">Rent & Hire</p>
-                            </a>
-                        </div>
-                        <div class="col-3  my-auto">
-                            <a href="#">
-                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/weddingrequisites.svg"/>
-                                <p class="fw-semibold opacity-75">Wedding Requisites</p>
-                            </a>
-                        </div>
-                        
-                        <div class="col-3  my-auto">
-                            <a href="#">
-                                <img src="	https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/homeservices.svg"/>
-                                <p class="fw-semibold opacity-75">Home Services</p>
-                            </a>
-                        </div>
-                        <div class="col-3  my-auto">
-                            <a href="#">
-                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/jobconsultants.svg"/>
-                                <p class="fw-semibold opacity-75">Jobs</p>
-                            </a>
-                        </div>
-                        <div class="col-3  my-auto">
-                            <a href="#">
-                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/repairsservices.svg"/>
-                                <p class="fw-semibold opacity-75">Repairs & Services</p>
-                            </a>
-                        </div>
-                        <div class="col-3  my-auto">
-                            <a href="#">
-                                <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/realestate/pghostelhotkey2xnew.gif" class="img-fluid" width="50px"/>
-                                <p class="fw-semibold opacity-75">PG/Hostel</p>
-                            </a>
-                        </div>
-                                            
-                        <div class="col-3  my-auto">
-                            <a href="#">
-                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/loans.svg"/>
-                                <p class="fw-semibold opacity-75">Loans<br>
-                                <a href="#" class="btn btn-sm btn-outline-danger py-0 fw-bold" style="font-size:10px;color:#e60000;">Instant</a></p>
-                            </a>
-                        </div>
-                        <div class="col-3  my-auto">
-                            <a href="#">
-                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/realestate.svg"/>
-                                <p class="fw-semibold opacity-75">Real Estate<br>
-                                <a href="#" class="btn btn-sm btn-outline-danger py-0 fw-bold" style="font-size:10px;color:#e60000;">Explore</a></p>
-                            </a>
-                        </div>
-                        <div class="col-3  my-auto">
-                            <a href="#">
-                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/education.svg"/>
-                                <p class="fw-semibold opacity-75">Education</p>
-                            </a>
-                        </div>
-                        <div class="col-3  my-auto">
-                            <a href="#">
-                                <img src="	https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/showmore.svg"/>
-                                <p class="fw-semibold opacity-75">Show More</p>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- main1 section end -->
-
-
-                    <!-- 2nd main section start -->
-                    <div class="d_m3 row m-0 mt-2">
-                        <div class="col-3 px-1 position-relative">
-                            <a href="#" class="">
-                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/android/newhome/1/food.jpg?v=1" class="img-fluid " alt="" />
-                                <span class="position-absolute bottom-0 start-0 ps-2 pb-2 text-white span_text">ORDER FOOD</span>
-                            </a>
-                        </div>
-                        <div class="col-3 px-1 position-relative">
-                            <a href="#">
-                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/iphone/new/JioSim.jpg" class="img-fluid" alt="" />
-                                <span class="position-absolute bottom-0 start-0 ps-2 pb-2 text-white span_text">JIO SIM</span>
-                            </a>
-                        </div>
-                        <div class="col-3 px-1 position-relative">
-                            <a href="#">
-                                <img src="https://akam.cdn.jdmagicbox.com/images/icontent/flight/flight_hmpg_banner_27feb.png" class="img-fluid" alt="" />
-                                <span class="position-absolute bottom-0 start-0 ps-2 pb-2 text-white span_text">BOOK FLIGHT</span>
-                            </a>
-                        </div>
-                        <div class="col-3 px-1 position-relative">
-                            <a href="#">
-                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/android/newhome/1/paybills.jpg?v=1" class="img-fluid" alt="" />
-                                <span class="position-absolute bottom-0 start-0 ps-2 pb-2 text-white span_text">PAY BILLS</span>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- 2nd main section end -->
-                    <!-- 3rd main section start -->
-                    <div class="d_m4 row m-0 mt-2">
-                        <div class="col-6 px-1">
-                            <a href="#">
-                                <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/realestate/explore2x.gif" class="img-fluid" alt="" />
-                            </a>
-                        </div>
-                        <div class="col-6 px-1">
-                            <a href="#">
-                                <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/realestate/postright2xnew.gif" class="img-fluid" alt="" />
-                            </a>
-                        </div>
-                    </div>
-                    <!-- 3rd main section end -->
-                    <!-- 4th main section start -->
-                    <div class="d_m5 row m-0 mt-2">
-                        <div>
-                            <a href="#" class="text-secondary-emphasis text-decoration-none fw-bold">Home Services <i class="fa-solid fa-chevron-right float-end"></i></a>
-                        </div>
-                        <div class="col-3 p-0 px-1 mt-1 position-relative">
-                            <a href="#">
-                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/iphone/newhome/2/acrepairservice.png?v=1" class="img-fluid" alt="">
-                                <span class="position-absolute bottom-0 start-0 ps-2 pb-2 text-white span_text">AC REPAIR & SERVICE</span>
-                            </a>
-                        </div>
-                        <div class="col-3 p-0 px-1 mt-1 position-relative">
-                            <a href="#">
-                                <img src="https://akam.cdn.jdmagicbox.com/images/myjd/img-cat-tvrepair_3x.png" class="img-fluid" alt="">
-                                <span class="position-absolute bottom-0 start-0 ps-2 pb-2 text-white span_text">TV REPAIR</span>
-                            </a>
-                        </div>
-                        <div class="col-3 p-0 px-1 mt-1 position-relative">
-                            <a href="#">
-                                <img src="https://akam.cdn.jdmagicbox.com/images/myjd/img-cat-washingmachine_3x.png" class="img-fluid" alt="">
-                                <span class="position-absolute bottom-0 start-0 ps-2 pb-2 text-white span_text">Washing Machine</span>
-                            </a>
-                        </div>
-                        <div class="col-3 p-0 px-1 mt-1 position-relative">
-                            <a href="#">
-                                <img src="https://akam.cdn.jdmagicbox.com/images/myjd/img-cat-pestcontrol_3x.png" class="img-fluid" alt="">
-                                <span class="position-absolute bottom-0 start-0 ps-2 pb-2 text-white span_text">PEST &nbsp; CONTROL</span>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- 4th main section end -->
-                    <!-- 5th main section start -->
-                    <div class="d_m6 row m-0 mt-2">
-                        <div class="col p-0">
-                            <a href="#">
-                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/android/new/Online_consultation_hm.gif" class="img-fluid" alt="" />
-                            </a>
-                        </div>
-                    </div>
-                    <!-- 5th main section end -->
-                    <!-- 6th main section start -->
-                    <div class="d_m7 row m-0 mt-2">
-                        <div>
-                            <a href="#" class="text-secondary-emphasis text-decoration-none fw-bold">Rent & Hire <i class="fa-solid fa-chevron-right float-end"></i></a>
-                        </div>
-                        <div class="col-3 p-0 px-1 position-relative">
-                            <a href="#">
-                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/android/newhome/2/hirevehicles.jpg?v=1" class="img-fluid" alt="" />
-                                <span class="position-absolute bottom-0 start-0 ps-2 pb-2 text-white span_text">HIRE &nbsp; VEHICLES</span>
-                            </a>
-                        </div>
-                        <div class="col-3 p-0 px-1 position-relative">
-                            <a href="#">
-                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/android/newhome/2/rentclothes.jpg?v=1" class="img-fluid" alt="" />
-                                <span class="position-absolute bottom-0 start-0 ps-2 pb-2 text-white span_text">RENT &nbsp; CLOTHES</span>
-                            </a>
-                        </div>
-                        <div class="col-3 p-0 px-1 position-relative">
-                            <a href="#">
-                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/android/newhome/2/rentfurniture.jpg?v=1" class="img-fluid" alt="" />
-                                <span class="position-absolute bottom-0 start-0 ps-2 pb-2 text-white span_text">RENT FURNITURE</span>
-                            </a>
-                        </div>
-                        <div class="col-3 p-0 px-1 position-relative">
-                            <a href="#">
-                                <img src="https://akam.cdn.jdmagicbox.com/images/icons/android/newhome/2/rentappliances.jpg?v=1" class="img-fluid" alt="" />
-                                <span class="position-absolute bottom-0 start-0 ps-2 pb-2 text-white span_text">RENT APPLIANCE</span>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- 6th main section end -->
-                    <!-- 7th main section start -->
-                    <div class="d_m8 row m-0 mt-2">
-                        <div class="mt-1">
-                            <a href="#" class="text-secondary-emphasis text-decoration-none fw-bold">Rent & Hire <i class="fa-solid fa-chevron-right float-end"></i></a>
-                        </div>
-                        <div class="col mt-1 position-relative">
-                            <a href="#">
-                                <img src="./img/lastimg.jpg" class="img-fluid" alt="" />
-                            </a>
-                            <div class="row position-absolute d-flex  bottom-0 pb-3" style="right: 104px;">
-                                <div class="col px-3">
-                                    <a href="#" class="text-decoration-none text-white">BUY</a>
-                                </div>
-                                <div class="col px-3">
-                                    <a href="#" class="text-decoration-none text-white">SELL</a>
-                                </div>
-                                <div class="col px-3">
-                                    <a href="#" class="text-decoration-none text-white">RENT</a>
-                                </div>
-                                <div class="col ps-4">
-                                    <a href="#" class="text-decoration-none text-white">PG</a>
+                    <div class="col-12">
+                        <div class="row m-0 border border-dark-subtle rounded-bottom border-top-0" style="padding:35px;">
+                            <div class="col-3">
+                                <h4 class="fw-bold text-dark">Travel Bookings</h4>
+                                <p style="font-size: 11px;">Instant ticket bookings for your best travel<br>experience</p>
+                                <a href="#" class="text-decoration-none fw-bold" style="font-size: 12px;">Explore More</a>
+                            </div>
+                            <div class="col-9 s_LS_main4">
+                                <div class="row text-center">
+                                    <div class="col">
+                                        <a href="#"><img class="img-fluid mb-2" src="./img/icons/bt_flight.svg"/><br>
+                                            <span>Flight</span>
+                                            <p class="text-green fw-normal" >Powered By<br>Easemytrip.com</p>
+                                        </a>
+                                    </div>
+                                    <div class="col">
+                                        <a href="#"><img class="img-fluid mb-2" src="./img/icons/bt_bus.svg"/><br>
+                                            <span>Bus</span>
+                                            <p class="text-green fw-normal" >Affordable Rides</p>
+                                        </a>
+                                    </div>
+                                    <div class="col">
+                                        <a href="#"><img class="img-fluid mb-2" src="./img/icons/bt_train.svg"/><br>
+                                            <span>Train</span>
+                                            <p class="text-green fw-normal" >Hassle-free Booking</p>
+                                        </a>
+                                    </div>
+                                    <div class="col">
+                                        <a href="#"><img class="img-fluid mb-2" src="./img/icons/bt_hotels.svg"/><br>
+                                            <span>Hotel</span>
+                                            <p class="text-green fw-normal" >Budget-friendly Stay</p>
+                                        </a>
+                                    </div>
+                                    <div class="col">
+                                        <a href="#"><img class="img-fluid mb-2" src="./img/icons/bt_carhire.svg"/><br>
+                                            <span>Car Rentals</span>
+                                            <p class="text-green fw-normal" >Drive Easy Anywhere</p>
+                                        </a>
+                                    </div>
+                                    <div class="col">
+                                        
+                                    </div>                                        
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- 7th main section end -->
-                </main>            
-                <!--mobile screen main section end -->
+                </div>
+                <!--s_LS_main5 section end-->
 
-                <footer> <!--s_tbdr-->
-                    <!-- mobile icons start -->
-                    <div class="row text-center d-sm-none s_footer_mob">
-                        <div class="col">
-                            <a href="#"><img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/ehomeactive.svg"/><br><span class="text-primary">Home</span></a>
+                <!--s_LS_main6 section start-->
+                <div class="row m-0 my-5">
+                    <h4 class="fw-bold py-2">Recent Activity</h4>
+                    <div class="col-4">
+                        <a href="#" class="text-decoration-none">
+                            <div class="border border-dark-subtle rounded-3">
+                                <div class="s_image">
+                                    <div class="ps-3 pt-3 lh-base">
+                                        <h6 class="fw-bold text-dark">
+                                            ARIPRA FREM HOUSE 1
+                                            <p class="text-dark-emphasis pt-1 fw-normal" style="font-size: 13px;">Aripra - Malappuram</p>
+                                        </h6>
+                                    </div>
+                                    <div class="s_image">
+                                        <img class="img-fluid s_imgee" src="https://content.jdmagicbox.com/comp/malappuram/b7/9999px483.x483.200213213824.i5b7/catalogue/narmada-homestay-cherakkaparamba-malappuram-home-stay-vbxy1tn4mr.jpg?w=1920&q=75" alt="pic" >
+                                    </div>
+                                    <div class="ps-3 pt-3 d-flex">
+                                        <img class="img-fluid rounded-circle" style="height:48px;width:48px;" src="https://profile.justdial.com/profileImg?i=vj%2BwFkcY%2BvxnvXR5scXY7aWVBDlAktwQcAg4mQ8MBgM%3D" alt="pic">   
+                                        <p class="ps-2 fw-bold lh-base pt-2 ms-1 text-dark" style="font-size:12px;">Some quick example<br><span class="text-body-secondary me-4 fw-normal" style="font-size:9px;">Wrote a review</span></p>
+                                    </div>
+                                    <div class="ps-3 pb-2">
+                                        <span class="fa fa-star text-warning fa-xs pb-2"></span>
+                                        <span class="fa fa-star text-warning fa-xs pb-2"></span>
+                                        <span class="fa fa-star text-warning fa-xs pb-2"></span>
+                                        <span class="fa fa-star text-warning fa-xs pb-2"></span>
+                                        <span class="fa fa-star text-warning fa-xs pb-2"></span>
+                                        <p class="text-dark" style="font-size: 12px;">
+                                            I had a wonderful experience at the narmatha homestay Every staff member I encountered, from the valet to the check- in to the cleaning staff were delightful and eager to help! Thank you! Will recommend to my colleagues! if anyone interested Deferentially visit.     
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>                            
+                    </div>
+                    <div class="col-4">
+                        <a href="#" class="text-decoration-none">
+                            <div class="border border-dark-subtle rounded-3">
+                                <div class="s_image">
+                                    <div class="ps-3 pt-3 lh-base">
+                                        <h6 class="fw-bold text-dark">
+                                            ARIPRA FREM HOUSE 2
+                                            <p class="text-dark-emphasis pt-1 fw-normal" style="font-size: 13px;">Aripra - Malappuram</p>
+                                        </h6>
+                                    </div>
+                                    <div class="s_image">
+                                        <img class="img-fluid s_imgee" src="https://content.jdmagicbox.com/comp/malappuram/b7/9999px483.x483.200213213824.i5b7/catalogue/narmada-homestay-cherakkaparamba-malappuram-home-stay-vbxy1tn4mr.jpg?w=1920&q=75" alt="pic" >
+                                    </div>
+                                    <div class="ps-3 pt-3 d-flex">
+                                        <img class="img-fluid rounded-circle" style="height:48px;width:48px;" src="https://profile.justdial.com/profileImg?i=vj%2BwFkcY%2BvxnvXR5scXY7aWVBDlAktwQcAg4mQ8MBgM%3D" alt="pic">   
+                                        <p class="ps-2 fw-bold lh-base pt-2 ms-1 text-dark" style="font-size:12px;">Some quick example<br><span class="text-body-secondary me-4 fw-normal" style="font-size:9px;">Wrote a review</span></p>
+                                    </div>
+                                    <div class="ps-3 pb-2">
+                                        <span class="fa fa-star text-warning fa-xs pb-2"></span>
+                                        <span class="fa fa-star text-warning fa-xs pb-2"></span>
+                                        <span class="fa fa-star text-warning fa-xs pb-2"></span>
+                                        <span class="fa fa-star text-warning fa-xs pb-2"></span>
+                                        <span class="fa fa-star text-warning fa-xs pb-2"></span>
+                                        <p class="text-dark" style="font-size: 12px;">
+                                            I had a wonderful experience at the narmatha homestay Every staff member I encountered, from the valet to the check- in to the cleaning staff were delightful and eager to help! Thank you! Will recommend to my colleagues! if anyone interested Deferentially visit.     
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a href="#" class="text-decoration-none">
+                            <div class="border border-dark-subtle rounded-3">
+                                <div class="s_image">
+                                    <div class="ps-3 pt-3 lh-base">
+                                        <h6 class="fw-bold text-dark">
+                                            ARIPRA FREM HOUSE 3
+                                            <p class="text-dark-emphasis pt-1 fw-normal" style="font-size: 13px;">Aripra - Malappuram</p>
+                                        </h6>
+                                    </div>
+                                    <div class="s_image">
+                                        <img class="img-fluid s_imgee" src="https://content.jdmagicbox.com/comp/malappuram/b7/9999px483.x483.200213213824.i5b7/catalogue/narmada-homestay-cherakkaparamba-malappuram-home-stay-vbxy1tn4mr.jpg?w=1920&q=75" alt="pic" >
+                                    </div>
+                                    <div class="ps-3 pt-3 d-flex">
+                                        <img class="img-fluid rounded-circle" style="height:48px;width:48px;" src="https://profile.justdial.com/profileImg?i=vj%2BwFkcY%2BvxnvXR5scXY7aWVBDlAktwQcAg4mQ8MBgM%3D" alt="pic">   
+                                        <p class="ps-2 fw-bold lh-base pt-2 ms-1 text-dark" style="font-size:12px;">Some quick example<br><span class="text-body-secondary me-4 fw-normal" style="font-size:9px;">Wrote a review</span></p>
+                                    </div>
+                                    <div class="ps-3 pb-2">
+                                        <span class="fa fa-star text-warning fa-xs pb-2"></span>
+                                        <span class="fa fa-star text-warning fa-xs pb-2"></span>
+                                        <span class="fa fa-star text-warning fa-xs pb-2"></span>
+                                        <span class="fa fa-star text-warning fa-xs pb-2"></span>
+                                        <span class="fa fa-star text-warning fa-xs pb-2"></span>
+                                        <p class="text-dark" style="font-size: 12px;">
+                                            I had a wonderful experience at the narmatha homestay Every staff member I encountered, from the valet to the check- in to the cleaning staff were delightful and eager to help! Thank you! Will recommend to my colleagues! if anyone interested Deferentially visit.     
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-4 my-4">
+                        <a href="#" class="text-decoration-none">
+                            <div class="border border-dark-subtle rounded-3">
+                                <div class="s_image">
+                                    <div class="ps-3 pt-3 lh-base">
+                                        <h6 class="fw-bold text-dark">
+                                            ARIPRA FREM HOUSE 4
+                                            <p class="text-dark-emphasis pt-1 fw-normal" style="font-size: 13px;">Aripra - Malappuram</p>
+                                        </h6>
+                                    </div>
+                                    <div class="s_image">
+                                        <img class="img-fluid s_imgee" src="https://content.jdmagicbox.com/comp/malappuram/b7/9999px483.x483.200213213824.i5b7/catalogue/narmada-homestay-cherakkaparamba-malappuram-home-stay-vbxy1tn4mr.jpg?w=1920&q=75" alt="pic" >
+                                    </div>
+                                    <div class="ps-3 pt-3 d-flex">
+                                        <img class="img-fluid rounded-circle" style="height:48px;width:48px;" src="https://profile.justdial.com/profileImg?i=vj%2BwFkcY%2BvxnvXR5scXY7aWVBDlAktwQcAg4mQ8MBgM%3D" alt="pic">   
+                                        <p class="ps-2 fw-bold lh-base pt-2 ms-1 text-dark" style="font-size:12px;">Some quick example<br><span class="text-body-secondary me-4 fw-normal" style="font-size:9px;">Wrote a review</span></p>
+                                    </div>
+                                    <div class="ps-3 pb-2">
+                                        <span class="fa fa-star text-warning fa-xs pb-2"></span>
+                                        <span class="fa fa-star text-warning fa-xs pb-2"></span>
+                                        <span class="fa fa-star text-warning fa-xs pb-2"></span>
+                                        <span class="fa fa-star text-warning fa-xs pb-2"></span>
+                                        <span class="fa fa-star text-warning fa-xs pb-2"></span>
+                                        <p class="text-dark" style="font-size: 12px;">
+                                            I had a wonderful experience at the narmatha homestay Every staff member I encountered, from the valet to the check- in to the cleaning staff were delightful and eager to help! Thank you! Will recommend to my colleagues! if anyone interested Deferentially visit.     
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-4 my-4">
+                        <a href="#" class="text-decoration-none">
+                            <div class="border border-dark-subtle rounded-3">
+                                <div class="s_image">
+                                    <div class="ps-3 pt-3 lh-base">
+                                        <h6 class="fw-bold text-dark">
+                                            ARIPRA FREM HOUSE 5
+                                            <p class="text-dark-emphasis pt-1 fw-normal" style="font-size: 13px;">Aripra - Malappuram</p>
+                                        </h6>
+                                    </div>
+                                    <div class="s_image">
+                                        <img class="img-fluid s_imgee" src="https://content.jdmagicbox.com/comp/malappuram/b7/9999px483.x483.200213213824.i5b7/catalogue/narmada-homestay-cherakkaparamba-malappuram-home-stay-vbxy1tn4mr.jpg?w=1920&q=75" alt="pic" >
+                                    </div>
+                                    <div class="ps-3 pt-3 d-flex">
+                                        <img class="img-fluid rounded-circle" style="height:48px;width:48px;" src="https://profile.justdial.com/profileImg?i=vj%2BwFkcY%2BvxnvXR5scXY7aWVBDlAktwQcAg4mQ8MBgM%3D" alt="pic">   
+                                        <p class="ps-2 fw-bold lh-base pt-2 ms-1 text-dark" style="font-size:12px;">Some quick example<br><span class="text-body-secondary me-4 fw-normal" style="font-size:9px;">Wrote a review</span></p>
+                                    </div>
+                                    <div class="ps-3 pb-2">
+                                        <span class="fa fa-star text-warning fa-xs pb-2"></span>
+                                        <span class="fa fa-star text-warning fa-xs pb-2"></span>
+                                        <span class="fa fa-star text-warning fa-xs pb-2"></span>
+                                        <span class="fa fa-star text-warning fa-xs pb-2"></span>
+                                        <span class="fa fa-star text-warning fa-xs pb-2"></span>
+                                        <p class="text-dark" style="font-size: 12px;">
+                                            I had a wonderful experience at the narmatha homestay Every staff member I encountered, from the valet to the check- in to the cleaning staff were delightful and eager to help! Thank you! Will recommend to my colleagues! if anyone interested Deferentially visit.     
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>                            
+                    </div>
+                    <div class="col-4 my-4">
+                        <a href="#" class="text-decoration-none">
+                            <div class="border border-dark-subtle rounded-3">
+                                <div class="s_image">
+                                    <div class="ps-3 pt-3 lh-base">
+                                        <h6 class="fw-bold text-dark">
+                                            ARIPRA FREM HOUSE 6
+                                            <p class="text-dark-emphasis pt-1 fw-normal" style="font-size: 13px;">Aripra - Malappuram</p>
+                                        </h6>
+                                    </div>
+                                    <div class="s_image">
+                                        <img class="img-fluid s_imgee" src="https://content.jdmagicbox.com/comp/malappuram/b7/9999px483.x483.200213213824.i5b7/catalogue/narmada-homestay-cherakkaparamba-malappuram-home-stay-vbxy1tn4mr.jpg?w=1920&q=75" alt="pic" >
+                                    </div>
+                                    <div class="ps-3 pt-3 d-flex">
+                                        <img class="img-fluid rounded-circle" style="height:48px;width:48px;" src="https://profile.justdial.com/profileImg?i=vj%2BwFkcY%2BvxnvXR5scXY7aWVBDlAktwQcAg4mQ8MBgM%3D" alt="pic">   
+                                        <p class="ps-2 fw-bold lh-base pt-2 ms-1 text-dark" style="font-size:12px;">Some quick example<br><span class="text-body-secondary me-4 fw-normal" style="font-size:9px;">Wrote a review</span></p>
+                                    </div>
+                                    <div class="ps-3 pb-2">
+                                        <span class="fa fa-star text-warning fa-xs pb-2"></span>
+                                        <span class="fa fa-star text-warning fa-xs pb-2"></span>
+                                        <span class="fa fa-star text-warning fa-xs pb-2"></span>
+                                        <span class="fa fa-star text-warning fa-xs pb-2"></span>
+                                        <span class="fa fa-star text-warning fa-xs pb-2"></span>
+                                        <p class="text-dark" style="font-size: 12px;">
+                                            I had a wonderful experience at the narmatha homestay Every staff member I encountered, from the valet to the check- in to the cleaning staff were delightful and eager to help! Thank you! Will recommend to my colleagues! if anyone interested Deferentially visit.     
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn s_lordbtn text-primary">
+                            Load More
+                        </button>                            
+                    </div>
+                </div>                    
+                <!--s_LS_main6 section end-->
+
+                <!--s_LS_main7 section start carousel slider -->
+                <!-- Papular Brands Section Start -->
+                <div class="s_main7 d-none d-lg-block" style="height: 330px;">
+                    <div class="slider-wrap position-relative mx-2">
+                        <div class="my-3 ms-3">
+                            <h4 class="fw-bold fs-4">Popular Brands</h4>
                         </div>
-                        <div class="col">
-                            <a href="#"><img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/b2b-icn.svg"/><br>B2B</a>
+                        <div class="slider-main d-flex mx-1" id="slider-main">
+                            <div class="col-4 item">
+                                <div class="card mx-2 border-0">
+                                    <a href="#">
+                                        <img class="img-fluid rounded-3" src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/brand_connect/lupin.png?w=640&q=75" alt="pic">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-4 item">
+                                <div class="card mx-2 border-0">
+                                    <a href="#">
+                                        <img class="img-fluid rounded-3" src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/brand_connect/web_essae.png?w=640&q=75" alt="pic">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-4 item">
+                                <div class="card mx-2 border-0">
+                                    <a href="#">
+                                        <img class="img-fluid rounded-3" src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/brand_connect/borosil.png?w=640&q=75" alt="pic">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-4 item">
+                                <div class="card mx-2 border-0">
+                                    <a href="#">
+                                        <img class="img-fluid rounded-3" src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/brand_connect/ifb_web_hp.png?w=640&q=75" alt="pic">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-4 item">
+                                <div class="card mx-2 border-0">
+                                    <a href="#">
+                                        <img class="img-fluid rounded-3" src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/brand_connect/nippon-web-hp.png?w=640&q=75" alt="pic">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-4 item">
+                                <div class="card mx-2 border-0">
+                                    <a href="#">
+                                        <img class="img-fluid rounded-3" src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/brand_connect/ambuja.png?w=640&q=75" alt="pic">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-4 item">
+                                <div class="card mx-2 border-0">
+                                    <a href="#">
+                                        <img class="img-fluid rounded-3" src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/brand_connect/Web-Banners_eureka.png?w=640&q=75" alt="pic">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-4 item">
+                                <div class="card mx-2 border-0">
+                                    <a href="#">
+                                        <img class="img-fluid rounded-3" src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/brand_connect/hp_hp_web.png?w=640&q=75" alt="pic">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-4 item">
+                                <div class="card mx-2 border-0">
+                                    <a href="#">
+                                        <img class="img-fluid rounded-3" src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/brand_connect/tesla.png?w=640&q=75" alt="pic">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-4 item">
+                                <div class="card mx-2 border-0">
+                                    <a href="#">
+                                        <img class="img-fluid rounded-3" src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/brand_connect/stanley.png?w=640&q=75" alt="pic">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-4 item">
+                                <div class="card mx-2 border-0">
+                                    <a href="#">
+                                        <img class="img-fluid rounded-3" src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/brand_connect/usha-Home-Page-web.png?w=640&q=75" alt="pic">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-4 item">
+                                <div class="card mx-2 border-0">
+                                    <a href="#">
+                                        <img class="img-fluid rounded-3" src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/brand_connect/mg-motors-web-hp.png?w=640&q=75" alt="pic">
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col">
-                            <a href="#"><img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/jdpay-icn.svg"/><br>Pay</a>
-                        </div>
-                        <div class="col">
-                            <a href="#"><img src="https://akam.cdn.jdmagicbox.com/images/icons/android/newswbg.png" width="25px"/><br>News</a>
-                        </div>
-                        <div class="col">
-                            <a href="#"><img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/ecmmore.svg"/><br>More</a>
+                        <div class="slider-btn d-flex justify-content-between">
+                            <button type="button" class="border border-start-0 rounded-end-2 rounded-start-0 btn btn-light s_prev" onclick="prev()">
+                                <i class="fa-solid fa-angle-left"></i>
+                            </button>
+                            <button type="button" class="border border-end-0 rounded-start-2 rounded-end-0 btn btn-light
+                             s_next" onclick="next()">
+                                <i class="fa-solid fa-angle-right"></i>
+                            </button>
                         </div>
                     </div>
-                    <!-- mobile icons end -->
-                    <div class="d-none d-sm-block">
-                        <div class="s_footer1 s_tbdr bg-warning">
-                            f1
+                </div>
+                <!-- Papular Brands Section End -->
+                <!--s_LS_main7 section end carousel slider -->
+            </main>
+            <!--Large screen main section end-->
+
+            <!--moblie screen main section start -->
+            <main class="s_main d-xl-none d-lg-none px-1 overflow-x-hidden" id="ss_menu">
+                <!-- small screen main1 section start -->
+                <div class="row m-0 text-center s_main1">                    
+                    <div class="col-3 my-auto">
+                        <a href="#">
+                            <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newhotkey/b2b_2x_wog-15dec.gif" class="img-fluid" width="50px"/>
+                            <p class="fw-semibold opacity-75">B2B</p>
+                        </a>
+                    </div>
+                    <div class="col-3  my-auto">
+                        <a href="#">
+                            <img src="https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/finddoctors.svg"/>
+                            <p class="fw-semibold opacity-75">Doctors</p>
+                        </a>
+                    </div>
+                    <div class="col-3  my-auto">
+                        <a href="#">
+                            <img src="https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/travelbookings.svg"/>
+                            <p class="fw-semibold opacity-75">Travel</p>
+                        </a>
+                    </div>                    
+                    <div class="col-3  my-auto">
+                        <a href="#">
+                            <img src="https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/beauty.svg"/>
+                            <p class="fw-semibold opacity-75">Beauty</p>
+                        </a>
+                    </div>
+
+                    <div class="col-3  my-auto">
+                        <a href="#">
+                            <img src="https://akam.cdn.jdmagicbox.com/images/icons/android/new/shop_online.svg"/>
+                            <p class="fw-semibold opacity-75">Shop Online</p>
+                        </a>
+                    </div>
+                    <div class="col-3  my-auto">
+                        <a href="#">
+                            <img src="https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/consultants.svg"/>
+                            <p class="fw-semibold opacity-75">Consultants</p>
+                        </a>
+                    </div>
+                    <div class="col-3  my-auto">
+                        <a href="#">
+                            <img src="https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/renthire.svg"/>
+                            <p class="fw-semibold opacity-75">Rent & Hire</p>
+                        </a>
+                    </div>
+                    <div class="col-3  my-auto">
+                        <a href="#">
+                            <img src="https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/weddingrequisites.svg"/>
+                            <p class="fw-semibold opacity-75">Wedding Requisites</p>
+                        </a>
+                    </div>
+                    
+                    <div class="col-3  my-auto">
+                        <a href="#">
+                            <img src="	https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/homeservices.svg"/>
+                            <p class="fw-semibold opacity-75">Home Services</p>
+                        </a>
+                    </div>
+                    <div class="col-3  my-auto">
+                        <a href="#">
+                            <img src="https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/jobconsultants.svg"/>
+                            <p class="fw-semibold opacity-75">Jobs</p>
+                        </a>
+                    </div>
+                    <div class="col-3  my-auto">
+                        <a href="#">
+                            <img src="https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/repairsservices.svg"/>
+                            <p class="fw-semibold opacity-75">Repairs & Services</p>
+                        </a>
+                    </div>
+                    <div class="col-3  my-auto">
+                        <a href="#">
+                            <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/realestate/pghostelhotkey2xnew.gif" class="img-fluid" width="50px"/>
+                            <p class="fw-semibold opacity-75">PG/Hostel</p>
+                        </a>
+                    </div>
+                                        
+                    <div class="col-3  my-auto">
+                        <a href="#">
+                            <img src="https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/loans.svg"/>
+                            <p class="fw-semibold opacity-75">Loans<br>
+                            <a href="#" class="btn btn-sm btn-outline-danger py-0 fw-bold" style="font-size:10px;color:#e60000;">Instant</a></p>
+                        </a>
+                    </div>
+                    <div class="col-3  my-auto">
+                        <a href="#">
+                            <img src="https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/realestate.svg"/>
+                            <p class="fw-semibold opacity-75">Real Estate<br>
+                            <a href="#" class="btn btn-sm btn-outline-danger py-0 fw-bold" style="font-size:10px;color:#e60000;">Explore</a></p>
+                        </a>
+                    </div>
+                    <div class="col-3  my-auto">
+                        <a href="#">
+                            <img src="https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/education.svg"/>
+                            <p class="fw-semibold opacity-75">Education</p>
+                        </a>
+                    </div>
+                    <div class="col-3  my-auto">
+                        <a href="#">
+                            <img src="	https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/showmore.svg"/>
+                            <p class="fw-semibold opacity-75">Show More</p>
+                        </a>
+                    </div>
+                </div>
+                <!-- small screen main1 section end -->
+                <!-- small screen main2 section start-->
+                <div class="s_main2 my-2 row text-center">
+                    <a href="#"><img class="img-fluid w-100" src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/free_listing_banner%20_14march.png"/></a>
+                </div>
+                <!-- small screen main2 section end-->
+                <!-- small screen main3 section start-->                
+                <div class="row mx-0 s_main3  my-2 text-center">
+                    <div class="col-3 ps-0 pe-1 position-relative">
+                        <a href="#">
+                            <img class="img-fluid w-100" src="https://akam.cdn.jdmagicbox.com/images/icons/android/newhome/1/food.jpg?v=1"/>
+                            <span class="position-absolute start-0 bottom-0 ps-2 pb-2 text-white text-start fw-semibold" style="font-size:12px;">ORDER FOOD</span>
+                        </a>
+                    </div>
+                    <div class="col-3 px-1 position-relative">
+                        <a href="#">
+                            <img class="img-fluid w-100" src="https://akam.cdn.jdmagicbox.com/images/icons/iphone/new/JioSim.jpg"/>
+                            <span class="position-absolute start-0 bottom-0 ps-2 pb-2 text-white text-start fw-semibold" style="font-size: 12px;">JIO SIM</span>
+                        </a>
+                    </div>
+                    <div class="col-3 px-1 position-relative">
+                        <a href="#">
+                            <img class="img-fluid w-100" src="https://akam.cdn.jdmagicbox.com/images/icontent/flight/flight_hmpg_banner_27feb.png"/>
+                            <span class="position-absolute start-0 bottom-0 ps-2 pb-2 text-white text-start fw-semibold" style="font-size:12px;">BOOK FLIGHT</span>
+                        </a>
+                    </div>
+                    <div class="col-3 ps-1 pe-0 position-relative">
+                        <a href="#">
+                            <img class="img-fluid w-100" src="https://akam.cdn.jdmagicbox.com/images/icons/android/newhome/1/paybills.jpg?v=1"/> 
+                            <span class="position-absolute start-0 bottom-0 ps-2 pb-2 text-white text-start fw-semibold" style="font-size: 12px;">PAY BILLS</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- small screen main3 section end-->
+                <!-- small screen main4 section start-->
+                <div class="row s_main4 mx-0 my-2 text-center">
+                    <div class="col px-1">
+                        <a href="#"><img class="img-fluid w-100" src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/realestate/explore2x.gif"/></a>
+                    </div>
+                    <div class="col px-1">
+                        <a href="#"><img class="img-fluid w-100" src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/realestate/postright2xnew.gif"/></a>
+                    </div>
+                </div>
+                <!-- small screen main4 section end-->
+                <!-- small screen main5 section start-->
+                <div class="row mx-0 mt-3">
+                    <div class="col p-1 fw-semibold">Home Services</div>
+                    <div class="col p-1 pt-2">
+                        <a href="#">
+                            <img class="img-fluid float-end" src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/right-arrow-21.svg"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="row mx-0 s_main5 my-2 text-center">
+                    <div class="col-3 px-1 position-relative">
+                        <a href="#">
+                            <img class="img-fluid w-100" src="https://akam.cdn.jdmagicbox.com/images/icons/iphone/newhome/2/acrepairservice.png?v=1"/>
+                            <span class="position-absolute start-0 bottom-0 ps-2 pb-2 text-white text-start fw-semibold" style="font-size:12px;">AC REPAIR & SERVICE</span>
+                        </a>
+                    </div>
+                    <div class="col-3 px-1 position-relative">
+                        <a href="#">
+                            <img class="img-fluid w-100" src="https://akam.cdn.jdmagicbox.com/images/myjd/img-cat-tvrepair_3x.png"/>
+                            <span class="position-absolute start-0 bottom-0 ps-2 pb-2 text-white fw-semibold" style="font-size: 12px;">TV REPAIR</span>
+                        </a>
+                    </div>
+                    <div class="col-3 px-1 position-relative">
+                        <a href="#">
+                            <img class="img-fluid w-100" src="https://akam.cdn.jdmagicbox.com/images/myjd/img-cat-washingmachine_3x.png"/>
+                            <span class="position-absolute start-0 bottom-0 ps-2 pb-2 text-white text-start fw-semibold" style="font-size:12px;">Washing Machine</span>
+                        </a>
+                    </div>
+                    <div class="col-3 px-1 position-relative">
+                        <a href="#">
+                            <img class="img-fluid w-100" src="https://akam.cdn.jdmagicbox.com/images/myjd/img-cat-pestcontrol_3x.png"/> 
+                            <span class="position-absolute start-0 bottom-0 ps-2 pb-2 text-white text-start fw-semibold" style="font-size: 12px;">PEST CONTROL</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- small screen main5 section end-->
+                <!-- small screen main6 section start-->
+                <div class="s_main6 my-2 text-center">
+                    <a href="#"><img class="img-fluid w-100" src="https://akam.cdn.jdmagicbox.com/images/icons/android/new/Online_consultation_hm.gif"/></a>
+                </div>
+                <!-- small screen main6 section end-->
+                <!-- small screen main7 section start-->
+                <div class="row mx-0 mt-3">
+                    <div class="col p-1 fw-semibold">Rent & Hire</div>
+                    <div class="col p-1 pt-2">
+                        <a href="#">
+                            <img class="img-fluid float-end" src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/right-arrow-21.svg"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="row mx-0 s_main7 my-1 text-center">
+                    <div class="col px-1 position-relative">
+                        <a href="#"><img class="img-fluid w-100" src="https://akam.cdn.jdmagicbox.com/images/icons/android/newhome/2/hirevehicles.jpg?v=1"/></a>
+                        <span class="position-absolute start-0 bottom-0 mb-2 ms-2 text-white text-start fw-semibold" style="font-size: 11px;">HIRE VEHICLES</span>
+                    </div>
+                    <div class="col px-1 position-relative">
+                        <a href="#"><img class="img-fluid w-100" src="https://akam.cdn.jdmagicbox.com/images/icons/android/newhome/2/rentclothes.jpg?v=1"/></a>
+                        <span class="position-absolute start-0 bottom-0 mb-2 ms-2 text-white text-start fw-semibold" style="font-size: 11px;">RENT CLOTHES</span>
+                    </div>
+                    <div class="col px-1 position-relative">
+                        <a href="#"><img class="img-fluid w-100" src="https://akam.cdn.jdmagicbox.com/images/icons/android/newhome/2/rentfurniture.jpg?v=1"/></a>
+                        <span class="position-absolute start-0 bottom-0 mb-2 ms-2 text-white text-start fw-semibold" style="font-size: 11px;">RENT FURNITURE</span>
+                    </div>
+                    <div class="col px-1 position-relative">
+                        <a href="#"><img class="img-fluid w-100" src="https://akam.cdn.jdmagicbox.com/images/icons/android/newhome/2/rentappliances.jpg?v=1"/></a>
+                        <span class="position-absolute start-0 bottom-0 mb-2 ms-2 text-white text-start fw-semibold" style="font-size: 11px;">RENT APPLIANCE</span>
+                    </div>
+                </div>
+                <!-- small screen main7 section end-->
+                <div class="row mx-0 mt-3">
+                    <div class="col p-1 fw-semibold">Real Estate</div>
+                    <div class="col p-1 pt-2">
+                        <a href="#">
+                            <img class="img-fluid float-end" src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/right-arrow-21.svg"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="row s_main7 mt-1  text-center">
+                    <div class="col text-center">                       
+                        <div class="position-relative">
+                            <img class="img-fluid w-100" src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/realestate/realestate-t-8nov.jpg"/>
+                            <span class="position-absolute start-0 bottom-0 mb-2 ms-2 text-white fw-semibold w-100" style="font-size: 12px;">
+                                <div class="row">
+                                    <div class="col-2 p-0 bg-primary">BUY</div> |
+                                    <div class="col-2 p-0 bg-primary">SELL</div> |
+                                    <div class="col-2 bg-primary">RENT</div> |
+                                    <div class="col-2 bg-primary">PG</div> 
+                                </div>
+                            </span>
                         </div>
-                        <div class="s_footer2 s_tbdr bg-warning">
-                            f2
+                    </div>
+                </div>
+            </main>            
+            <!--mobile screen main section end -->
+
+            <footer> <!--s_tbdr-->
+                <!-- mobile icons start -->
+                <div class="row text-center d-xl-none d-lg-none s_footer_mob">
+                    <div class="col">
+                        <a href="#"><img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/ehomeactive.svg"/><br><span class="text-primary">Home</span></a>
+                    </div>
+                    <div class="col">
+                        <a href="#"><img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/b2b-icn.svg"/><br>B2B</a>
+                    </div>
+                    <div class="col">
+                        <a href="#"><img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/jdpay-icn.svg"/><br>Pay</a>
+                    </div>
+                    <div class="col">
+                        <a href="#"><img src="https://akam.cdn.jdmagicbox.com/images/icons/android/newswbg.png" width="25px"/><br>News</a>
+                    </div>
+                    <div class="col">
+                        <a href="#"><img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/newprot_w/ecmmore.svg"/><br>More</a>
+                    </div>
+                </div>
+                <!-- mobile icons end -->
+                <footer class="s_footer1 d-none d-lg-block">
+                    <div class="footer-1 p-5 border-bottom border-top">
+                        <h6 class="fs-16 fw-bold">Popular Categories</h6>
+                        <div class="fs-11 s_mostsearch">
+                            <a href="#">Body Massage Centers</a> <span>|</span>
+                            <a href="#">Cinema Halls</a> <span>|</span>
+                            <a href="#">Schools</a> <span>|</span>
+                            <a href="#">Beauty Spas</a> <span>|</span>
+                            <a href="#">Dermatologists</a> <span>|</span>
+                            <a href="#">Hospitals</a> <span>|</span>
+                            <a href="#">Malls</a> <span>|</span>
+                            <a href="#">Gyms</a> <span>|</span>
+                            <a href="#">Beauty Parlours</a> <span>|</span>
+                            <a href="#">Estate Agents</a> <span>|</span>
+                            <a href="#">Banquet Halls</a> <span>|</span>
+                            <a href="#">ENT Doctors</a> <span>|</span>
+                            <a href="#">Book Shops</a> <span>|</span>
+                            <a href="#">Bike On Rent</a> <span>|</span>
+                            <a href="#">Sexologist Doctors</a> <span>|</span>
+                            <a href="#">Neurologists</a> <span>|</span>
+                            <a href="#">Gynaecologist & Obstetrician Doctors</a> <span>|</span>
+                            <a href="#">Tiffin Services</a> <span>|</span>
+                            <a href="#">Travel Agents</a> <span>|</span>
+                            <a href="#">Paying Guest Accommodations</a> <span>|</span>
+                            <a href="#">General Physician Doctors</a> <span>|</span>
+                            <a href="#">Dentists</a> <span>|</span>
+                            <a href="#">Orthopaedic Doctors</a> <span>|</span>
+                            <a href="#">Chemists</a> <span>|</span>
+                            <a href="#">Motor Training Schools</a> <span>|</span>
+                            <a href="#">Gastroenterologists</a> <span>|</span>
+                            <a href="#">Car Rental</a> <span>|</span>
+                            <a href="#">Salons</a> <span>|</span>
+                            <a href="#">Courier Services</a> <span>|</span>
+                            <a href="#">Dance Classes</a> <span>|</span>
+                            <a href="#">Pathology Labs</a> <span>|</span>
+                            <a href="#">Taxi Services</a> <span>|</span>
+                            <a href="#">Cake Shops</a> <span>|</span>
+                            <a href="#">AC Repair & Services</a> <span>|</span>
+                            <a href="#">Mobile Phone Dealers</a> <span>|</span>
+                            <a href="#">Pet Shops</a> <span>|</span>
+                            <a href="#">Dmart</a> <span>|</span>
+                            <a href="#">Packers And Movers</a> <span>|</span>
+                            <a href="#">Psychiatrists</a> <span>|</span>
+                            <a href="#">Dharamshalas</a> <span>|</span>
+                            <a href="#">Urologist Doctors</a> <span>|</span>
+                            <a href="#">Bakeries</a> <span>|</span>
+                            <a href="#">Bicycle Dealers</a> <span>|</span>
+                            <a href="#">Coffee Shops</a> <span>|</span>
+                            <a href="#">Paediatricians</a> <span>|</span>
+                            <a href="#">Sonography Centres</a> <span>|</span>
+                            <a href="#">Yoga Classes</a> <span>|</span>
+                            <a href="#">Hostels</a> <span>|</span>
+                            <a href="#">Cardiologists</a> <span>|</span>
+                            <a href="#">Electrical Shops</a> <span>|</span>
+                            <a href="#">Skin Care Clinics</a> <span>|</span>
+                            <a href="#">Diagnostic Centres</a> <span>|</span>
+                            <a href="#">Homeopathic Doctors</a> <span>|</span>
+                            <a href="#">Physiotherapists</a> <span>|</span>
+                            <a href="#">Photo Studios</a> <span>|</span>
+                            <a href="#">Plumbers</a> <span>|</span>
+                            <a href="#">Music Classes</a> <span>|</span>
+                            <a href="#">Electricians</a> <span>|</span>
+                            <a href="#">Sports Goods Dealers</a> <span>|</span>
+                            <a href="#">Shoe Dealers</a> <span>|</span>
+                            <a href="#">Hair Stylists</a> <span>|</span>
+                            <a href="#">Gift Shops</a> <span>|</span>
+                            <a href="#">Ophthalmologists</a> <span>|</span>
+                            <a href="#">Car Repair & Services</a> <span>|</span>
+                            <a href="#">Ayurvedic DoctorsEye Clinics</a> <span>|</span>
+                            <a href="#">Restaurants</a> <span>|</span>
+                            <a href="#">Carpenters</a> <span>|</span>
+                            <a href="#">Jewellery Showrooms</a> <span>|</span>
+                            <a href="#">Cooks On Hire</a> <span>|</span>
+                            <a href="#">Stationery Shops</a> <span>|</span>
+                            <a href="#">Nephrologists</a> <span>|</span>
+                            <a href="#">Caterers</a> <span>|</span>
+                            <a href="#">Interior Designers</a> <span>|</span>
+                            <a href="#">Rehabilitation Center</a> <span>|</span>
+                            <a href="#">Drug De Addiction Center</a> <span>|</span>
+                            <a href="#">Grocery Stores</a> <span>|</span>
+                            <a href="#">AC Repair</a> <span>|</span>
+                            <a href="#">Hotels</a> <span>|</span>
+                            <a href="#">Cab & Car Rental</a> <span>|</span>
+                            <a href="#">Spa & Salon</a> <span>|</span>
+                            <a href="#">Car service</a> <span>|</span>
+                            <a href="#">Lab Test</a> <span>|</span>
+                            <a href="#">On Demand Service</a> <span>|</span>
+                            <a href="#">JdSocial Blog</a> <span>|</span>
+                            <a href="#">Jd Curated Collection</a>
                         </div>
-                        <div class="s_footer3 s_tbdr bg-warning">
-                            f3
+                    </div>
+                    <div class="row m-0">
+                        <div class="col-8 px-5">
+                            <div class="d-flex py-4 mt-3 s_social text-decoration-none">
+                                <p class="fs-6 pe-2 text-dark mt-1 fw-semibold">Follow us on</p>
+                                <div>
+                                <a href="#"><img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/flw_facebook_active.svg" class="img-fluid px-1" alt="pic"></a>
+                                <a href="#"><img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/flw_youtube_active.svg" class="img-fluid px-1" alt="pic"></a>
+                                <a href="#"><img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/flw_insta_active.svg" class="img-fluid px-1" alt="pic"></a>
+                                <a href="#"><img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/flw_linkedIn_active.svg" class="img-fluid px-1" alt="pic"></a>
+                                <a href="#"><img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/flw_twitter_active.svg" class="img-fluid px-1" alt="pic"></a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="s_footer4 s_tbdr bg-warning">
-                            f4
+                        <div class="col-4 pe-5">
+                            <div class="d-flex s_store float-end mt-4 pt-3">
+                                <a href="#"><img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/getapp_googleplay.png" class="img-fluid px-1" alt="logo"></a>
+                                <a href="#"><img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/getapp_appstore.png" class="img-fluid" alt="logo"></a>
+                            </div>
                         </div>
+                    </div>
+                    <hr>
+                    <div class="mx-4 py-4 px-4 s_footerpara">
+                        <p class="text-body-secondary">Welcome to Justdial, your 'one stop shop' where you are assisted with day-to-day and exclusive planning and purchasing activities. We take pride in our iconic customer support number, 8888888888 and the fact that we own a strong hold on local business information pan India.</p>
+                        <p class="text-body-secondary">Our service extends from providing address and contact details of business establishments around the country, to making orders and reservations for leisure, medical, financial, travel and domestic purposes. We enlist business information across varied sectors like Hotels, Restaurants, Auto Care, Home Decor, Personal and Pet Care, Fitness, Insurance, Real Estate, Sports, Schools, etc. from all over the country. Holding information right from major cities like Mumbai, Delhi, Bangalore, Hyderabad, Chennai, Ahmedabad and Pune our reach stretches out to other smaller cities across the country too.</p>
+                        <p class="text-body-secondary">Our 'Free Listing' feature gives a platform to showcase varied specialities. We then furnish you with the information via phone, SMS, web, App and WAP as well as, create a space for you to share your experiences through our 'Rate & Review' feature. Through the 'Best Deals', 'Last Minute Deals' and 'Live Quotes', we make sure that you are offered the best bargains in the market.</p>
+                    </div>
+                    <div class="mx-4 px-4">
+                        <p class="fs-6">Some of our services that will prove useful to you on a day-to-day basis are :</p>
+                        <div class="row m-0">
+                            <div class="col-3 p-0 pe-4">
+                                <div class="d-flex">
+                                    <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/ftr_entertainment-events.svg" class="img-fluid" alt="logo">
+                                    <a href="#" id="s_anchor">
+                                        <p class="text-light-emphasis fw-semibold mt-3 ps-2 fs-14">Entertainment & Events</p>
+                                    </a>
+                                </div>
+                                <div class="s_para">
+                                    <p class="text-body-secondary">Through Justdial's Entertainment and Events you can find the latest and upcoming happenings in the city, ranging from music shows, theater acts, stand up comedy, art exhibitions, etc. and book tickets for the same.</p>
+                                </div>
+                            </div>
+                            <div class="col-3 p-0 p-0 px-4">
+                                <div class="d-flex">
+                                    <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/ftr_onlinerecharge.svg" class="img-fluid" alt="logo">
+                                    <a href="#" id="s_anchor">
+                                        <p class="text-light-emphasis fw-semibold mt-3 ps-2 fs-14">Online Recharge/Bill Payment</p>
+                                    </a>
+                                </div>
+                                <div class="s_para">
+                                    <p class="text-body-secondary">With the help of this service you can stay on track in making your bill payments and recharges without having to wait in a queue. This includes bill payments for gas, electricity, data card, DTH, landline, etc.</p>
+                                </div>
+                            </div>
+                            <div class="col-3 p-0 p-0 px-4">
+                                <div class="d-flex">
+                                    <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/ftr_hotelbookings.svg" class="img-fluid" alt="logo">
+                                    <a href="#" id="s_anchor">
+                                        <p class="text-light-emphasis fw-semibold mt-3 ps-2 fs-14">Hotel Bookings</p>
+                                    </a>
+                                </div>
+                                <div class="s_para">
+                                    <p class="text-body-secondary">Accompanied by business information, an address, a contact number and a visual reference, you are at leverage to make online reservations at the hotel of your choosing as you plan a trip to another city.</p>
+                                </div>
+                            </div>
+                            <div class="col-3 p-0 p-0 px-4">
+                                <div class="d-flex">
+                                    <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/ftr_busbookings.svg" class="img-fluid" alt="logo">
+                                    <a href="#" id="s_anchor">
+                                        <p class="text-light-emphasis fw-semibold mt-3 ps-2 fs-14">Bus Bookings</p>
+                                    </a>
+                                </div>
+                                <div class="s_para">
+                                    <p class="text-body-secondary">With the assistance of our Bus Booking service, you can filter the type of bus you are looking for and make a desired reservation. This service brings to you buses that travel to various destinations across the country.</p>
+                                </div>
+                            </div>
+                            <div class="col-3 p-0 pe-4">
+                                <div class="d-flex">
+                                    <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/ftr_shoponline.svg" class="img-fluid" alt="logo">
+                                    <a href="#" id="s_anchor">
+                                        <p class="text-light-emphasis fw-semibold mt-3 ps-2 fs-14">Shop Online</p>
+                                    </a>
+                                </div>
+                                <div class="s_para">
+                                    <p class="text-body-secondary">This online shopping feature brings forth a plethora of gadgets like phones, refrigerators, washing machines, cameras, etc. for you to choose from and make a smart buy.</p>
+                                </div>
+                            </div>
+                            <div class="col-3 p-0 px-4">
+                                <div class="d-flex">
+                                    <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/ftr_jobs.svg" class="img-fluid" alt="logo">
+                                    <a href="#" id="s_anchor">
+                                        <p class="text-light-emphasis fw-semibold mt-3 ps-2 fs-14">Jobs</p>
+                                    </a>
+                                </div>
+                                <div class="s_para">
+                                    <p class="text-body-secondary">Providing pertinent jobs to job seekers and relevant profiles to employers, this service will help you reach out to employers and vice-versa across industry verticals, experience levels and geographies.</p>
+                                </div>
+                            </div>
+                            <div class="col-3 p-0 px-4">
+                                <div class="d-flex">
+                                    <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/ftr_bookatable.svg" class="img-fluid" alt="logo">
+                                    <a href="#" id="s_anchor">
+                                        <p class="text-light-emphasis fw-semibold mt-3 ps-2 fs-14">Book a Table</p>
+                                    </a>
+                                </div>
+                                <div class="s_para">
+                                    <p class="text-body-secondary">Book a Table with Justdial- the quickest way to make table reservations online. You can also pre-order your food from the best restaurants around you. Book a Table service makes your dine-out experience pleasant and hassle-free.</p>
+                                </div>
+                            </div>
+                            <div class="col-3 p-0 px-4">
+                                <div class="d-flex">
+                                    <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/ftr_orderfood.svg" class="img-fluid" alt="logo">
+                                    <a href="#" id="s_anchor">
+                                        <p class="text-light-emphasis fw-semibold mt-3 ps-2 fs-14">Order Food Online</p>
+                                    </a>
+                                </div>
+                                <div class="s_para">
+                                    <p class="text-body-secondary">You are just three clicks away from placing an order and exploring a wide range of exotic cuisines. Order food online with Justdial and get your favourite food delivered at your doorstep. Search for restaurants, view reviews and ratings, avail discounts and order your food.</p>
+                                </div>
+                            </div>
+                            <div class="col-3 p-0 pe-4">
+                                <div class="d-flex">
+                                    <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/ftr_movies.svg" class="img-fluid" alt="logo">
+                                    <a href="#" id="s_anchor">
+                                        <p class="text-light-emphasis fw-semibold mt-3 ps-2 fs-14">Movies</p>
+                                    </a>
+                                </div>
+                                <div class="s_para">
+                                    <p class="text-body-secondary">This gives you access to book tickets and keep updated with the latest movies. With the provision of a synopsis, cast, crew and trailer, you can make a better choice in the movie you would like to watch.</p>
+                                </div>
+                            </div>
+                            <div class="col-3 p-0 px-4">
+                                <div class="d-flex">
+                                    <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/ftr_movies-online.svg" class="img-fluid" alt="logo">
+                                    <a href="#" id="s_anchor">
+                                        <p class="text-light-emphasis fw-semibold mt-3 ps-2 fs-14">Movies Online</p>
+                                    </a>
+                                </div>
+                                <div class="s_para">
+                                    <p class="text-body-secondary">Find and Watch Online Streaming Movies and TV shows .</p>
+                                </div>
+                            </div>
+                            <div class="col-3 p-0 px-4">
+                                <div class="d-flex">
+                                    <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/ftr_flightbookings.svg" class="img-fluid" alt="logo">
+                                    <a href="#" id="s_anchor">
+                                        <p class="text-light-emphasis fw-semibold mt-3 ps-2 fs-14">Flight Bookings</p>
+                                    </a>
+                                </div>
+                                <div class="s_para">
+                                    <p class="text-body-secondary">By way of flight bookings, one can make flight reservations, to your chosen destination - be it business, leisure or 'home for the weekend'. Find affordable tickets here.</p>
+                                </div>
+                            </div>
+                            <div class="col-3 p-0 px-4">
+                                <div class="d-flex">
+                                    <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/ftr_trainbooking.svg" class="img-fluid" alt="logo">
+                                    <a href="#" id="s_anchor">
+                                        <p class="text-light-emphasis fw-semibold mt-3 ps-2 fs-14">Train Bookings</p>
+                                    </a>
+                                </div>
+                                <div class="s_para">
+                                    <p class="text-body-secondary">With us you can explore the ends of the country by means of our 'Book Train Ticket' service. So business or family travelers, wanderers and explorers, a ticket to your next destination awaits you.</p>
+                                </div>
+                            </div>
+                            <div class="col-3 p-0 pe-4">
+                                <div class="d-flex">
+                                    <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/ftr_automobile.svg" class="img-fluid" alt="logo">
+                                    <a href="#" id="s_anchor">
+                                        <p class="text-light-emphasis fw-semibold mt-3 ps-2 fs-14">Automobile</p>
+                                    </a>
+                                </div>
+                                <div class="s_para">
+                                    <p class="text-body-secondary">Explore the best set of wheels out there and book a test drive with Justdial to make a wise decision when you buy a luxurious car. Get the 'Best Deals' on the most comfortable as well as high-end, premier brands and 'Shop Online' for car accessories. Your dream car awaits you.</p>
+                                </div>
+                            </div>
+                            <div class="col-3 p-0 px-4">
+                                <div class="d-flex">
+                                    <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/ftr_spa-salon.svg" class="img-fluid" alt="logo">
+                                    <a href="#" id="s_anchor">
+                                        <p class="text-light-emphasis fw-semibold mt-3 ps-2 fs-14">Spa & Salon</p>
+                                    </a>
+                                </div>
+                                <div class="s_para">
+                                    <p class="text-body-secondary">Skip the wait to get pampered at a spa or a salon. In a few clicks, 'Book an Appointment' online through Justdial before your next visit.</p>
+                                </div>
+                            </div>
+                            <div class="col-3 p-0 px-4">
+                                <div class="d-flex">
+                                    <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/ftr_ods.svg" class="img-fluid" alt="logo">
+                                    <a href="#" id="s_anchor">
+                                        <p class="text-light-emphasis fw-semibold mt-3 ps-2 fs-14">Jd Xperts</p>
+                                    </a>
+                                </div>
+                                <div class="s_para">
+                                    <p class="text-body-secondary">Find the 'Best Deal', be it for repairing your air-conditioner, getting your car serviced or cleaning your water purifier and drive your utility problems away.</p>
+                                </div>
+                            </div>
+                            <div class="col-3 p-0 px-4">
+                                <div class="d-flex">
+                                    <img src="https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/ftr_doctorappointment.svg" class="img-fluid" alt="logo">
+                                    <a href="#" id="s_anchor">
+                                        <p class="text-light-emphasis fw-semibold mt-3 ps-2 fs-14">Doctor Appointment</p>
+                                    </a>
+                                </div>
+                                <div class="s_para">
+                                    <p class="text-body-secondary">Find the suitable medical specialist to take care of your health and well-being. Healthcare made easy.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mx-3 px-4 s_para2 my-5">
+                        <p class="text-body-secondary">
+                            Some of the other services that can be of assistance to you for leisure, health and home convenience are - Pest Control, Skin Care Clinics, Painters, Laundry Services, Interior Designers, Mobile Phone Repair, Vaccination Centres, Internet Service Providers, etc. With an endless number of things under the sun, you can be sure this will be your 'One Stop Shop' to find everything and more.
+                        </p>
+                    </div>
+                    <div class="mx-4 footer_lg lh-1 my-3 px-3">
+                        <p class="fw-semibold text-body-secondary">Explore JD Curated Collection</p>
+                        <a href="#" class="text-body-secondary">Travel & Tourism </a> <span>|</span>
+                        <a href="#" class="text-body-secondary">Beauty </a> <span>|</span>
+                        <a href="#" class="text-body-secondary">Health & Fitness </a> <span>|</span>
+                        <a href="#" class="text-body-secondary">Food & Beverage </a> <span>|</span>
+                        <a href="#" class="text-body-secondary">Banking & Finance </a> <span>|</span>
+                        <a href="#" class="text-body-secondary">On demand Services </a> <span>|</span>
+                        <a href="#" class="text-body-secondary">Home & Office </a> <span>|</span>
+                        <a href="#" class="text-body-secondary">Education & Jobs </a> <span>|</span>
+                        <a href="#" class="text-body-secondary">Real Estate </a> <span>|</span>
+                        <a href="#" class="text-body-secondary">Shopping & Recreation </a>
+                    </div>
+                    <hr>
+                </footer>
+                <!-- Main Footer Section Start -->
+                <footer class="d-none d-lg-block">
+                    <div class="row m-0 mx-3">
+                        <div class="col-2 s_ft ps-4">
+                            <div>
+                                <p class="fs-6 fw-semibold">Quick Links</p>
+                                <ul class="list-unstyled">
+                                    <li class="py-1"><a href="#" class="text-body-secondary">About us</a></li>
+                                    <li class="py-0"><a href="#" class="text-body-secondary">Investor Relations</a></li>
+                                    <li class="py-1"><a href="#" class="text-body-secondary">We're hiring</a></li>
+                                    <li class="py-0"><a href="#" class="text-body-secondary">Customer Care</a></li>
+                                    <li class="py-1"><a href="#" class="text-body-secondary">Free Listing</a></li>
+                                    <li class="py-0"><a href="#" class="text-body-secondary">What's New</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-2 s_ft mt-4 pt-3" style="margin-right: -50px !important;">
+                            <ul class="list-unstyled">
+                                <li class="py-1"><a href="#" class="text-body-secondary">Advertise</a></li>
+                                <li class="py-0"><a href="#" class="text-body-secondary">Media</a></li>
+                                <li class="py-1"><a href="#" class="text-body-secondary">Testimaniais</a></li>
+                                <li class="py-0"><a href="#" class="text-body-secondary">Feedback</a></li>
+                                <li class="py-1"><a href="#" class="text-body-secondary">Business Badge</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-2 s_ft" style="margin-right: -37px !important;">
+                            <div>
+                                <p class="fs-6 fw-semibold">Jd verticals</p>
+                                <ul class="list-unstyled">
+                                    <li class="py-1"><a href="#" class="text-body-secondary">Jdmart</a></li>
+                                    <li class="py-0"><a href="#" class="text-body-secondary">Bills & Recharge</a></li>
+                                    <li class="py-1"><a href="#" class="text-body-secondary">Car service</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-1 s_ft mt-4 pt-3 mx-3">
+                            <div>
+                                <ul class="list-unstyled">
+                                    <li class="py-1"><a href="#" class="text-body-secondary">Book a Table</a></li>
+                                    <li class="py-0"><a href="#" class="text-body-secondary">AC Repair</a></li>
+                                    <li class="py-1"><a href="#" class="text-body-secondary">Hospitals</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-1 s_ft mt-4 pt-3 mx-3">
+                            <div>
+                                <ul class="list-unstyled px-2">
+                                    <li class="py-1"><a href="#" class="text-body-secondary">Real Estate</a></li>
+                                    <li class="py-0"><a href="#" class="text-body-secondary">Flights</a></li>
+                                    <li class="py-1"><a href="#" class="text-body-secondary">Jobs</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-1 s_ft mt-4 pt-3 mx-2">
+                            <div>
+                                <ul class="list-unstyled">
+                                    <li class="py-1"><a href="#" class="text-body-secondary">Movies</a></li>
+                                    <li class="py-0"><a href="#" class="text-body-secondary">Bus</a></li>
+                                    <li class="py-1"><a href="#" class="text-body-secondary">Automobile</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-1 s_ft mt-4 pt-3 mx-2">
+                            <div>
+                                <ul class="list-unstyled">
+                                    <li class="py-1"><a href="#" class="text-body-secondary">Entertainment</a></li>
+                                    <li class="py-0"><a href="#" class="text-body-secondary">Train</a></li>
+                                    <li class="py-1"><a href="#" class="text-body-secondary">Jd Xperts</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-1 s_ft mt-4 pt-3 mx-4">
+                            <div>
+                                <ul class="list-unstyled">
+                                    <li class="py-1"><a href="#" class="text-body-secondary">Doctors</a></li>
+                                    <li class="py-0"><a href="#" class="text-body-secondary">Hotel</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                    <hr>
+                    <div class="ms-4 d-flex s_ft py-3">
+                        <p class="s_para3 text-body-secondary mt-1 ps-3">Copyrights 2008-23.  All Rights Reserved &nbsp;</p>
+                        <ul class="list-unstyled d-flex s_ft">
+                            <li><a href="#" class="text-body-secondary">Privacy </a><span>| &nbsp;</span> </li>
+                            <li><a href="#" class="text-body-secondary">Terms </a><span>| &nbsp;</span></li>
+                            <li><a href="#" class="text-body-secondary">infringement</a></li>
+                        </ul>
                     </div>
                 </footer>
+                <!-- Main Footer Section End -->
+                </div>
+            </footer>
         </div>
+        <script src="./js/script.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
     </body>
