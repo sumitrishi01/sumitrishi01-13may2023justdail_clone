@@ -428,6 +428,9 @@ header{
         padding: 0px 15px;
         background-color: #FFFFFF;        
     }
+    .s_sellbanner{
+        padding-bottom:50px;
+    }
 }
 @media all and (min-width: 1024px){
     .s_busi{
